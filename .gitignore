@@ -1,0 +1,12 @@
+*_dat
+*_log
+*_logs
+*_data
+*.bak
+.*.swp
+*~
+*.log
+jdk
+cit-HepTh.txt
+mysqld/data
+mysqld/run

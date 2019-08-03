@@ -1,0 +1,4 @@
+#!/bin/bash
+basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+cd ${basedir}
+/home/grakra/workspace/hbase_deploy/hbase-2.1.4/bin/hbase --config /home/grakra/workspace/hadoop2.6_docker/hbase_client_conf/ $*

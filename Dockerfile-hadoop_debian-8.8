@@ -1,0 +1,19 @@
+FROM debian:8.8
+
+MAINTAINER "ranpanf" ranpanf@gmail.com
+
+RUN apt-key update
+RUN apt-get update
+RUN apt-get install sudo
+COPY sources.list /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends ssh rsync && rm -rf /var/lib/apt/lists/*
+
+COPY jdk /opt/jdk
+ENV JAVA_HOME /opt/jdk
+ENV PATH ${JAVA_HOME}/bin:${PATH}
+EXPOSE 9000 9001 50070 50075 50090 50030 50060
+RUN apt-get install sudo && rm -fr /var/lib/apt/lists/*
+RUN useradd -u 1000 -s /bin/bash -m hdfs
+RUN usermod -a -G sudo hdfs
+RUN echo hdfs ALL=(ALL) NOPASSWD : ALL > /etc/sudoers

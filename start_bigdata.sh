@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -e -o pipefail
+basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+cd ${basedir}
+
+${basedir}/start_zk_3.4.8.sh bootstrap
+sleep 5
+${basedir}/start_bk_4.4.0.sh bootstrap
+sleep 5
+${basedir}/start_hdfs_2.6.sh bootstrap
+sleep 5
+docker exec -it namenode0 /root/hadoop/bin/hdfs dfs -mkdir -p /mr_history
+docker exec -it namenode0 /root/hadoop/bin/hdfs dfs -chmod -R 0777 /mr_history
+docker exec -it namenode0 /root/hadoop/bin/hdfs dfs -mkdir -p /spark_history
+docker exec -it namenode0 /root/hadoop/bin/hdfs dfs -chmod -R 0777 /spark_history
+hdfs dfs -ls /
+
+${basedir}/start_yarn_2.6.sh bootstrap
+sleep 5
+${basedir}/start_mr_history_server.sh 
+${basedir}/start_spark_history_server.sh 
+sleep 5
+
+hdfs dfs -mkdir -p /user/grakra/data
+hdfs dfs -put *.sh /user/grakra/data/
+hdfs dfs -ls /user/grakra/data
+hdfs dfs -mkdir -p /tmp/spark-events
+hdfs dfs -mkdir -p /shared/spark-logs
+hdfs dfs -mkdir -p /shared/spark_jars
+hdfs dfs -put /home/grakra/workspace/spark-2.4.3-bin-hadoop2.6/jars/* /shared/spark_jars/
+hdfs dfs -put /home/grakra/workspace/spark-2.4.3-bin-hadoop2.6/spark_libs.zip /shared/
+hdfs dfs -put cit-HepTh.txt /user/grakra/data/
