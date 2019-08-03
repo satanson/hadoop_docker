@@ -61,9 +61,6 @@ if [ -n "$bootstrap" ];then
   sudo rm -fr ${basedir}/hmaster*_tmp/*
   sudo rm -fr ${basedir}/hregionserver*_tmp/*
   sudo rm -fr ${basedir}/hthriftserver*_tmp/*
-  sudo rm -fr ${basedir}/hmaster*_logs/*
-  sudo rm -fr ${basedir}/hregionserver*_logs/*
-  sudo rm -fr ${basedir}/hthriftserver*_logs/*
   for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))} hthriftserver{0..$((${hthriftserverCount}-1))}");do
     dat=${basedir:?"undefined"}/${name:?"undefined"}_tmp
     logs=${basedir:?"undefined"}/${name:?"undefined"}_logs
@@ -71,6 +68,10 @@ if [ -n "$bootstrap" ];then
     mkdir -p ${logs}
   done
 fi
+
+sudo rm -fr ${basedir}/hmaster*_logs/*
+sudo rm -fr ${basedir}/hregionserver*_logs/*
+sudo rm -fr ${basedir}/hthriftserver*_logs/*
 
 for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))}");do
   startHMaster $name

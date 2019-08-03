@@ -1,4 +1,10 @@
 create_namespace 'SYSTEM'
+create 'SYSTEM:test', 'f0', 'f1', 'f2'
+put 'SYSTEM:test', 'r1', 'f0', 'foobar'
+put 'SYSTEM:test', 'r2', 'f1', 'foobaz'
+put 'SYSTEM:test', 'r3', 'f2', 'foobuzz'
+put 'SYSTEM:test', 'r1', 'f1', 'deadbeef'
+scan 'SYSTEM:test'
 add_rsgroup 'SYSTEM'
 list_rsgroups
 move_servers_rsgroup 'SYSTEM', ['hregionserver0:6310','hregionserver1:6310','hregionserver2:6310']

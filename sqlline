@@ -1,0 +1,5 @@
+#!/bin/bash
+basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+cd ${basedir}
+HBASE_DEPLOY_DIR=/home/grakra/workspace/hbase_deploy
+env HBASE_HOME=${HBASE_DEPLOY_DIR}/hbase HBASE_CONF_DIR=${basedir}/hbase_client_conf python2 ${HBASE_DEPLOY_DIR}/phoenix/bin/sqlline.py  zk0:2181/hbase

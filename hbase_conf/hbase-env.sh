@@ -109,7 +109,7 @@ export HBASE_LOG_DIR=${HBASE_HOME}/logs
 # export HBASE_REST_OPTS="$HBASE_REST_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8074"
 
 # A string representing this instance of hbase. $USER by default.
-# export HBASE_IDENT_STRING=$USER
+export HBASE_IDENT_STRING=$USER-$(hostname)
 
 # The scheduling priority for daemon processes.  See 'man nice'.
 # export HBASE_NICENESS=10
