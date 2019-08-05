@@ -9,9 +9,9 @@ hthriftserverCount=2
 cd  ${basedir}
 
 hbaseRoot=/home/grakra/workspace/hbase_deploy/hbase-2.1.4
-dockerFlags="--rm -w /root -u root -e USER=root --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
-	-v ${hbaseRoot}:/root/hbase
-  -v ${BTRACE_HOME}:/root/btrace
+dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
+	-v ${hbaseRoot}:/home/hdfs/hbase
+  -v ${BTRACE_HOME}:/home/hdfs/btrace
   "
 
 startNode(){
@@ -29,24 +29,24 @@ startNode(){
   --hostname $name
   --ip $ip 
   -v ${PWD}/${name}_tmp:${hbaseTmpDir}
-  -v ${PWD}/${name}_logs:/root/hbase/logs
-  -v ${confDir}:/root/hbase/conf
+  -v ${PWD}/${name}_logs:/home/hdfs/hbase/logs
+  -v ${confDir}:/home/hdfs/hbase/conf
   "
-	docker run $flags hadoop_debian:8.8 /root/hbase/bin/hbase ${command}
+	docker run $flags hadoop_debian:8.8 /home/hdfs/hbase/bin/hbase ${command}
 }
 
 startHMaster(){
 	local name=$1;shift
-	startNode $name "/root/hbase_tmp" ${PWD}/hbase_conf master start
+	startNode $name "/home/hdfs/hbase_tmp" ${PWD}/hbase_conf master start
 }
 
 startHRegionServer(){
 	local name=$1;shift
-	startNode $name "/root/hbase_tmp" ${PWD}/hbase_conf regionserver start
+	startNode $name "/home/hdfs/hbase_tmp" ${PWD}/hbase_conf regionserver start
 }
 
 startHThriftServer(){
-	startNode $name "/root/hbase_tmp" ${PWD}/hbase_conf thrift -m 150 -w 1000 -q 2000 --port 9400 --infoport 9405  start
+	startNode $name "/home/hdfs/hbase_tmp" ${PWD}/hbase_conf thrift -m 150 -w 1000 -q 2000 --port 9400 --infoport 9405  start
 }
 
 for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))} hthriftserver{0..$((${hthriftserverCount}-1))}");do

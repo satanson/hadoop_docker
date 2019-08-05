@@ -11,3 +11,4 @@ move_servers_rsgroup 'SYSTEM', ['hregionserver0:6310','hregionserver1:6310','hre
 list_rsgroups
 move_namespaces_rsgroup 'SYSTEM', ['SYSTEM']
 list_rsgroups
+scan 'SYSTEM:test'
