@@ -1,14 +1,14 @@
 #!/bin/bash
 
-bootstrap=${1};shift
-basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+bootstrap=$1;shift
 yarnRmCount=2
 yarnNmCount=6
 
 cd  ${basedir}
 
-hadoopRoot=/home/grakra/workspace/hadoop-2.6.0-cdh5.7.0
-sparkRoot=/home/grakra/workspace/spark-2.4.3-bin-hadoop2.6
+hadoopRoot=${basedir}/../hadoop_all/hadoop
+sparkRoot=${basedir}/../spark-2.4.3-bin-hadoop2.6
 
 dockerFlags="--rm -w /root -u root -e USER=root --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
 	-v ${hadoopRoot}:/root/hadoop

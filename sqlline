@@ -1,5 +1,7 @@
 #!/bin/bash
-basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+script=$(readlink -f ${BASH_SOURCE:-$0})
+basedir=$(cd $(dirname ${script});pwd)
 cd ${basedir}
-HBASE_DEPLOY_DIR=/home/grakra/workspace/hbase_deploy
-env HBASE_HOME=${HBASE_DEPLOY_DIR}/hbase HBASE_CONF_DIR=${basedir}/hbase_client_conf python2 ${HBASE_DEPLOY_DIR}/phoenix/bin/sqlline.py  zk0:2181/hbase
+HBASE_HOME=$(readlink -f ${basedir}/../hadoop_all/hbase)
+PHOENIX_HOME=$(readlink -f ${basedir}/../hadoop_all/phoenix)
+env HBASE_HOME=${HBASE_HOME} HBASE_CONF_DIR=${basedir}/hbase_client_conf python2 ${PHOENIX_HOME}/bin/sqlline.py  zk0:2181/hbase

@@ -7,7 +7,7 @@ dataNodeCount=6
 
 cd  ${basedir}
 
-hadoopRoot=/home/grakra/workspace/hadoop-2.6.0-cdh5.7.0
+hadoopRoot=$(readlink -f ${basedir}/../hadoop_all/hadoop)
 dockerFlags="--rm -w /root -u root -e USER=root --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
 	-v ${hadoopRoot}:/root/hadoop
   "
@@ -27,7 +27,7 @@ startNode(){
   --hostname $name
   --ip $ip 
   -v ${PWD}/${name}_dat:${targetDataDir}
-  -v ${PWD}/${name}_log:/root/hadoop/logs
+  -v ${PWD}/${name}_logs:/root/hadoop/logs
   -v ${confDir}:/root/hadoop/etc/hadoop
   -v ${PWD}/start_hdfs_node.sh:/root/hadoop/start_hdfs_node.sh
   "
@@ -43,7 +43,7 @@ format(){
   --hostname $name \
   --ip $ip \
   -v ${PWD}/${name}_dat:/root/hadoop_name_dir \
-  -v ${PWD}/${name}_log:/root/hadoop/logs \
+  -v ${PWD}/${name}_logs:/root/hadoop/logs \
   -v ${PWD}/${name}_conf:/root/hadoop/etc/hadoop \
   '
   local name=namenode0
@@ -86,8 +86,8 @@ if [ -n "$bootstrap" ];then
     sudo rm -fr ${dat:?"undefined"}/current
     mkdir -p ${dat}
   done
-  sudo rm -fr ${basedir}/namenode*_log/*
-  sudo rm -fr ${basedir}/datanode*_log/*
+  sudo rm -fr ${basedir}/namenode*_logs/*
+  sudo rm -fr ${basedir}/datanode*_logs/*
   format
 fi
 

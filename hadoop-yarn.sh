@@ -1,2 +1,4 @@
 #!/bin/bash
-bash  /home/grakra/workspace/hadoop-2.6.0-cdh5.7.0/bin/yarn --config /home/grakra/workspace/hadoop2.6_docker/hadoop_conf_client/ $@
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+set -e -o pipefail
+bash  ${basedir}/hadoop_deploy/hadoop/bin/yarn --config ${basedir}/hadoop_conf_client/ $@

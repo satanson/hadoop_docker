@@ -1,0 +1,4 @@
+#!/bin/bash
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+cd ${basedir}
+${basedir}/../hadoop_all/hadoop/bin/hdfs --config ${basedir}/hadoop_conf_client/ $@

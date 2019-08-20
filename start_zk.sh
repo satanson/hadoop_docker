@@ -1,6 +1,8 @@
 #!/bin/bash
-basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
 bootstrap=$1;shift
+
+zkRoot=${basedir}/../hadoop_all/zookeeper
 
 set -e -o pipefail
 if [ -n "${bootstrap}" ];then
@@ -17,7 +19,7 @@ for node in $(eval "echo zk{0..$((${zkNum}-1))}") ;do
 done
 
 cd ${basedir}
-zkRoot=/home/grakra/workspace/zookeeper-3.4.8
+
 dockerFlags="-tid --rm -w /root -u root --privileged --net static_net
   -v ${PWD}/hosts:/etc/hosts -v ${zkRoot}:/root/zk -v ${PWD}/zk_conf:/root/zk/conf"
 

@@ -1,4 +1,6 @@
 #!/bin/bash
-basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+script=$(readlink -f ${BASE_SOURCE:-$0})
+basedir=$(cd $(dirname ${script});pwd)
 cd ${basedir}
-/home/grakra/workspace/hbase_deploy/hbase-2.1.4/bin/hbase --config /home/grakra/workspace/hadoop2.6_docker/hbase_client_conf/ $*
+HBASE_DEPLOY=${basedir}/../hadoop_all/hbase
+${HBASE_DEPLOY}/bin/hbase --config ${basedir}/hbase_client_conf/ $*

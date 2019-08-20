@@ -1,9 +1,9 @@
 #!/bin/bash
-basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
 bootstrap=$1;shift
 
 cd ${basedir}
-bkRoot=/home/grakra/workspace/bookkeeper-server-4.4.0
+bkRoot=$(readlink -f ${basedir}/../hadoop_all/bookkeeper-server)
 bkNum=3
 
 for node in $(eval "echo bk{0..$((${bkNum}-1))}");do

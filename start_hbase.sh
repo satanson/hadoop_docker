@@ -1,26 +1,37 @@
 #!/bin/bash
 
 bootstrap=${1};shift
-basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
 hmasterCount=2
 hregionserverCount=6
 hthriftserverCount=2
 
 cd  ${basedir}
 
-hbaseRoot=/home/grakra/workspace/hbase_deploy/hbase-2.1.4
-dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
+hbaseRoot=$(readlink -f ${basedir}/../hadoop_all/hbase)
+
+dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net 
+  --security-opt seccomp:unconfined
+  --cap-add ALL
+  --ipc private
+  -v ${PWD}/hosts:/etc/hosts 
+  -v ${JAVA_HOME}:/opt/jdk
 	-v ${hbaseRoot}:/home/hdfs/hbase
   -v ${BTRACE_HOME}:/home/hdfs/btrace
+  -v ${HOME}/.greys:/home/hdfs/.greys
   "
 
 startNode(){
 	local name=$1;shift
-	local hbaseTmpDir=$1;shift
   local confDir=$1;shift
   local command=$*
 
 	local ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$name\b/" hosts)
+  mkdir -p ${PWD}/${name}_systemp/
+  mkdir -p ${PWD}/${name}_logs
+  mkdir -p ${PWD}/${name}_tmp
+  #rm -fr ${PWD}/${name}_systemp/*
+  #rm -fr ${PWD}/${name}_logs/*
 
 	flags="
   ${dockerFlags}
@@ -28,7 +39,8 @@ startNode(){
   --name $name
   --hostname $name
   --ip $ip 
-  -v ${PWD}/${name}_tmp:${hbaseTmpDir}
+  -v ${PWD}/${name}_tmp:/home/hdfs/hbase_tmp
+  -v ${PWD}/${name}_systmp:/tmp
   -v ${PWD}/${name}_logs:/home/hdfs/hbase/logs
   -v ${confDir}:/home/hdfs/hbase/conf
   "
@@ -37,16 +49,16 @@ startNode(){
 
 startHMaster(){
 	local name=$1;shift
-	startNode $name "/home/hdfs/hbase_tmp" ${PWD}/hbase_conf master start
+	startNode $name ${PWD}/hbase_conf master start
 }
 
 startHRegionServer(){
 	local name=$1;shift
-	startNode $name "/home/hdfs/hbase_tmp" ${PWD}/hbase_conf regionserver start
+	startNode $name ${PWD}/hbase_conf regionserver start
 }
 
 startHThriftServer(){
-	startNode $name "/home/hdfs/hbase_tmp" ${PWD}/hbase_conf thrift -m 150 -w 1000 -q 2000 --port 9400 --infoport 9405  start
+	startNode $name ${PWD}/hbase_conf thrift -m 150 -w 1000 -q 2000 --port 9400 --infoport 9405  start
 }
 
 for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))} hthriftserver{0..$((${hthriftserverCount}-1))}");do
@@ -59,9 +71,9 @@ done
 if [ -n "$bootstrap" ];then
   hdfs dfs -rm -r /hbase
   docker exec -it zk0 /root/zk/bin/zkCli.sh -server localhost:2181 rmr /hbase
-  sudo rm -fr ${basedir}/hmaster*_tmp/*
-  sudo rm -fr ${basedir}/hregionserver*_tmp/*
-  sudo rm -fr ${basedir}/hthriftserver*_tmp/*
+  rm -fr ${basedir}/hmaster*_tmp/*
+  rm -fr ${basedir}/hregionserver*_tmp/*
+  rm -fr ${basedir}/hthriftserver*_tmp/*
   for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))} hthriftserver{0..$((${hthriftserverCount}-1))}");do
     dat=${basedir:?"undefined"}/${name:?"undefined"}_tmp
     logs=${basedir:?"undefined"}/${name:?"undefined"}_logs
@@ -69,10 +81,6 @@ if [ -n "$bootstrap" ];then
     mkdir -p ${logs}
   done
 fi
-
-sudo rm -fr ${basedir}/hmaster*_logs/*
-sudo rm -fr ${basedir}/hregionserver*_logs/*
-sudo rm -fr ${basedir}/hthriftserver*_logs/*
 
 for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))}");do
   startHMaster $name
