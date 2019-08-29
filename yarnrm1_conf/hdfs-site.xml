@@ -48,10 +48,6 @@
     <value>gra2,kra2</value>
   </property>
   <property>
-    <name>dfs.ha.namenode.id</name>
-    <value>gra2</value>
-  </property>
-  <property>
     <name>dfs.namenode.servicerpc-address.grakrabackend.gra2</name>
     <value>namenode0:5061</value>
   </property>
@@ -77,33 +73,8 @@
   </property>
 
   <property>
-    <name>dfs.namenode.edits.dir</name>
-    <value>/root/hadoop_name_dir</value>
-  </property>
-
-  <property>
     <name>dfs.namenode.shared.edits.dir</name>
-    <value>bookkeeper://zk0:2181;zk1:2181;zk2:2181/bk_nn_grakra</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.edits.journal-plugin.bookkeeper</name>
-    <value>org.apache.hadoop.contrib.bkjournal.BookKeeperJournalManager</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.bookkeeperjournal.zk.ledgers</name>
-    <value>/ledgers</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.bookkeeperjournal.zk.availablebookies</name>
-    <value>/ledgers/available</value>
-  </property>
-
-  <property>
-    <name>dfs.namenode.bookkeeperjournal.zk.session.timeout</name>
-    <value>600000</value>
+    <value>bookkeeper://zk0:2181/bk_nn_grakra</value>
   </property>
 
   <property>
@@ -126,12 +97,12 @@
 
   <property>
     <name>dfs.namenode.name.dir</name>
-    <value>/root/hadoop_name_dir</value>
+    <value>/home/hdfs/hadoop_name_dir</value>
   </property>
 
   <property>
     <name>dfs.datanode.data.dir</name>
-    <value>/root/hadoop_data_dir</value>
+    <value>/home/hdfs/hadoop_data_dir</value>
   </property>
 
   <property>

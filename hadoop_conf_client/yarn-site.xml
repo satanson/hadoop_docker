@@ -112,11 +112,11 @@
 
   <property>
     <name>yarn.resourcemanager.nodes.include-path</name>
-    <value>/root/hadoop/etc/hadoop/yarnnm.include</value>
+    <value>/home/hdfs/hadoop/etc/hadoop/yarnnm.include</value>
   </property>
   <property>
     <name>yarn.resourcemanager.nodes.exclude-path</name>
-    <value>/root/hadoop/etc/hadoop/yarnnm.exclude</value>
+    <value>/home/hdfs/hadoop/etc/hadoop/yarnnm.exclude</value>
   </property>
   
   <property>
@@ -152,11 +152,11 @@
 
   <property>
     <name>yarn.nodemanager.local-dirs</name>
-    <value>/root/yarnnm_data/nm-local-dir</value>
+    <value>/home/hdfs/yarnnm_data/nm-local-dir</value>
   </property>
   <property>
     <name>yarn.nodemanager.log-dirs</name>
-    <value>/root/yarnnm_data/nm-log-dir</value>
+    <value>/home/hdfs/yarnnm_data/nm-log-dir</value>
   </property>
 
   <property>

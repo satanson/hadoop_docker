@@ -28,7 +28,7 @@
 
     <property>
         <name>hbase.tmp.dir</name>
-        <value>/root/hbase_tmp</value>
+        <value>/home/hdfs/hbase_tmp</value>
     </property>
 
     <property>

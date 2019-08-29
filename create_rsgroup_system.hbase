@@ -1,5 +1,5 @@
 create_namespace 'SYSTEM'
-create 'SYSTEM:test', 'f0', 'f1', 'f2'
+create 'SYSTEM:test', 'f0', 'f1', 'f2', SPLITS=>["user0", "user1", "user2","user3", "user4", "user5", "user6", "user7", "user8", "user9"]
 put 'SYSTEM:test', 'r1', 'f0', 'foobar'
 put 'SYSTEM:test', 'r2', 'f1', 'foobaz'
 put 'SYSTEM:test', 'r3', 'f2', 'foobuzz'

@@ -19,7 +19,7 @@
 <configuration>
  <property>
  <name>fs.defaultFS</name>
- <value>hdfs://grakrabackend</value>
+ <value>hdfs://namenode0:5060</value>
  </property>
 
  <property>

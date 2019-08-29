@@ -49,9 +49,9 @@ export HADOOP_BALANCER_OPTS="-Dcom.sun.management.jmxremote $HADOOP_BALANCER_OPT
 export HADOOP_JOBTRACKER_OPTS="-Dcom.sun.management.jmxremote $HADOOP_JOBTRACKER_OPTS \
    	-Dcom.sun.management.jmxremote.port=10004 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
 
-export HDFS_NAMENODE_USER=root
-export HDFS_SECONDARYNAMENODE_USER=root
-export HDFS_DATANODE_USER=root
+export HDFS_NAMENODE_USER=hdfs
+export HDFS_SECONDARYNAMENODE_USER=hdfs
+export HDFS_DATANODE_USER=hdfs
 # Therefore, the vast majority (BUT NOT ALL!) of these defaults
 # are configured for substitution and not append.  If append
 # is preferable, modify this file accordingly.

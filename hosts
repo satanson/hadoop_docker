@@ -37,3 +37,42 @@
 192.168.110.95 hregionserver5
 192.168.110.100 hthriftserver0
 192.168.110.101 hthriftserver1
+
+192.168.110.102	ya_datanode0
+192.168.110.103	ya_datanode1
+192.168.110.104	ya_datanode2
+192.168.110.105	ya_datanode3
+192.168.110.106	ya_datanode4
+192.168.110.107	ya_datanode5
+
+192.168.110.108	ya_namenode0
+192.168.110.109	ya_namenode1
+
+
+192.168.110.140 ya_zk0
+192.168.110.141 ya_zk1
+192.168.110.142 ya_zk2
+192.168.110.150 ya_bk0
+192.168.110.151 ya_bk1
+192.168.110.152 ya_bk2
+
+192.168.110.160 ya_yarnrm0
+192.168.110.161 ya_yarnrm1
+
+192.168.110.172 ya_yarnnm0
+192.168.110.173 ya_yarnnm1
+192.168.110.174 ya_yarnnm2
+192.168.110.175 ya_yarnnm3
+192.168.110.176 ya_yarnnm4
+192.168.110.177 ya_yarnnm5
+
+192.168.110.180 ya_hmaster0
+192.168.110.181 ya_hmaster1
+192.168.110.190 ya_hregionserver0
+192.168.110.191 ya_hregionserver1
+192.168.110.192 ya_hregionserver2
+192.168.110.193 ya_hregionserver3
+192.168.110.194 ya_hregionserver4
+192.168.110.195 ya_hregionserver5
+192.168.110.200 ya_hthriftserver0
+192.168.110.201 ya_hthriftserver1

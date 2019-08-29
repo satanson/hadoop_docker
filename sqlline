@@ -4,4 +4,4 @@ basedir=$(cd $(dirname ${script});pwd)
 cd ${basedir}
 HBASE_HOME=$(readlink -f ${basedir}/../hadoop_all/hbase)
 PHOENIX_HOME=$(readlink -f ${basedir}/../hadoop_all/phoenix)
-env HBASE_HOME=${HBASE_HOME} HBASE_CONF_DIR=${basedir}/hbase_client_conf python2 ${PHOENIX_HOME}/bin/sqlline.py  zk0:2181/hbase
+env HBASE_HOME=${HBASE_HOME} HBASE_CONF_DIR=${basedir}/hbase_client_conf python2 ${PHOENIX_HOME}/bin/sqlline.py  zk0:2181/hbase $*

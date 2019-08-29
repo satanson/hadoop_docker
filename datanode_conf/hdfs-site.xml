@@ -121,12 +121,12 @@
 
   <property>
     <name>dfs.namenode.name.dir</name>
-    <value>/root/hadoop_name_dir</value>
+    <value>/home/hdfs/hadoop_name_dir</value>
   </property>
 
   <property>
     <name>dfs.datanode.data.dir</name>
-    <value>/root/hadoop_data_dir</value>
+    <value>/home/hdfs/hadoop_data_dir</value>
   </property>
 
   <property>

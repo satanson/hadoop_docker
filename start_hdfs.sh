@@ -8,8 +8,8 @@ dataNodeCount=6
 cd  ${basedir}
 
 hadoopRoot=$(readlink -f ${basedir}/../hadoop_all/hadoop)
-dockerFlags="--rm -w /root -u root -e USER=root --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
-	-v ${hadoopRoot}:/root/hadoop
+dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
+	-v ${hadoopRoot}:/home/hdfs/hadoop
   "
 startNode(){
 	local name=$1;shift
@@ -27,24 +27,23 @@ startNode(){
   --hostname $name
   --ip $ip 
   -v ${PWD}/${name}_dat:${targetDataDir}
-  -v ${PWD}/${name}_logs:/root/hadoop/logs
-  -v ${confDir}:/root/hadoop/etc/hadoop
-  -v ${PWD}/start_hdfs_node.sh:/root/hadoop/start_hdfs_node.sh
+  -v ${PWD}/${name}_logs:/home/hdfs/hadoop/logs
+  -v ${confDir}:/home/hdfs/hadoop/etc/hadoop
   "
-	docker run $flags hadoop_debian:8.8 /root/hadoop/start_hdfs_node.sh ${command}
+	docker run $flags hadoop_debian:8.8 /home/hdfs/hadoop/bin/hdfs ${command}
 }
 
 format(){
-  sudo rm -fr ${PWD}/namenode*_dat/*
+  rm -fr ${PWD}/namenode*_dat/*
 	flags=' \
   ${dockerFlags} \
   -it \
   --name $name \
   --hostname $name \
   --ip $ip \
-  -v ${PWD}/${name}_dat:/root/hadoop_name_dir \
-  -v ${PWD}/${name}_logs:/root/hadoop/logs \
-  -v ${PWD}/${name}_conf:/root/hadoop/etc/hadoop \
+  -v ${PWD}/${name}_dat:/home/hdfs/hadoop_name_dir \
+  -v ${PWD}/${name}_logs:/home/hdfs/hadoop/logs \
+  -v ${PWD}/${name}_conf:/home/hdfs/hadoop/etc/hadoop \
   '
   local name=namenode0
 	local ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$name\b/" hosts)
@@ -54,20 +53,20 @@ format(){
 	local ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$name\b/" hosts)
   local namenode1_flags=$(eval "echo ${flags}")
   
-	docker run ${namenode0_flags} hadoop_debian:8.8 bash -c "rm -fr /root/hadoop/logs/* && rm -fr /root/hadoop_name_dir/* && /root/hadoop/bin/hdfs namenode -format -force -nonInteractive"
-  docker run ${namenode0_flags} hadoop_debian:8.8 /root/hadoop/bin/hdfs namenode -initializeSharedEdits -force -nonInteractive
-	docker run ${namenode1_flags} -v ${PWD}/namenode0_dat:/root/hadoop_name_dir_active hadoop_debian:8.8 cp -r /root/hadoop_name_dir_active/current /root/hadoop_name_dir/
+	docker run ${namenode0_flags} hadoop_debian:8.8 bash -c "rm -fr /home/hdfs/hadoop/logs/* && rm -fr /home/hdfs/hadoop_name_dir/* && /home/hdfs/hadoop/bin/hdfs namenode -format -force -nonInteractive"
+  docker run ${namenode0_flags} hadoop_debian:8.8 /home/hdfs/hadoop/bin/hdfs namenode -initializeSharedEdits -force -nonInteractive
+	docker run ${namenode1_flags} -v ${PWD}/namenode0_dat:/home/hdfs/hadoop_name_dir_active hadoop_debian:8.8 cp -r /home/hdfs/hadoop_name_dir_active/current /home/hdfs/hadoop_name_dir/
 }
 
 startNameNode(){
 	local name=$1;shift
-	startNode $name "/root/hadoop_name_dir" ${PWD}/${name}_conf namenode
+	startNode $name "/home/hdfs/hadoop_name_dir" ${PWD}/${name}_conf namenode
 }
 
 
 startDataNode(){
 	local name=$1;shift
-	startNode $name "/root/hadoop_data_dir" ${PWD}/datanode_conf datanode
+	startNode $name "/home/hdfs/hadoop_data_dir" ${PWD}/datanode_conf datanode
 }
 
 
@@ -79,15 +78,15 @@ for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))} datanode{0..$((${d
 done
 
 if [ -n "$bootstrap" ];then
-  sudo rm -fr ${basedir}/namenode*_dat/*
-  #sudo rm -fr ${basedir}/datanode*_dat/*
+  rm -fr ${basedir}/namenode*_dat/*
+  #rm -fr ${basedir}/datanode*_dat/*
   for name in $(eval "echo datanode{0..$((${dataNodeCount}-1))}");do
     dat=${basedir:?"undefined"}/${name:?"undefined"}_dat
-    sudo rm -fr ${dat:?"undefined"}/current
+    rm -fr ${dat:?"undefined"}/current
     mkdir -p ${dat}
   done
-  sudo rm -fr ${basedir}/namenode*_logs/*
-  sudo rm -fr ${basedir}/datanode*_logs/*
+  rm -fr ${basedir}/namenode*_logs/*
+  rm -fr ${basedir}/datanode*_logs/*
   format
 fi
 
@@ -96,8 +95,8 @@ for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))}");do
 done
 
 sleep 5
-docker exec -it namenode0 /root/hadoop/bin/hdfs haadmin -ns grakrabackend -transitionToActive gra2 --forceactive
-docker exec -it namenode0 /root/hadoop/bin/hdfs dfsadmin -safemode leave
+docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -transitionToActive gra2 --forceactive
+docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs dfsadmin -safemode leave
 sleep 5
 
 for name in $(eval "echo datanode{0..$((${dataNodeCount}-1))}");do

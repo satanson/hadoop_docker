@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 bootstrap=${1};shift
 basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
 hmasterCount=2
@@ -7,6 +8,7 @@ hregionserverCount=6
 hthriftserverCount=2
 
 cd  ${basedir}
+source ${basedir}/functions.sh
 
 hbaseRoot=$(readlink -f ${basedir}/../hadoop_all/hbase)
 
@@ -28,7 +30,7 @@ startNode(){
 
 	local ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$name\b/" hosts)
   mkdir -p ${PWD}/${name}_systmp/
-  rm -fr ${PWD}/${name}_logs/*
+  #rm -fr ${PWD}/${name}_logs/*
   mkdir -p ${PWD}/${name}_logs
   mkdir -p ${PWD}/${name}_tmp
 
@@ -60,37 +62,89 @@ startHThriftServer(){
 	startNode $name ${PWD}/hbase_conf thrift -m 150 -w 1000 -q 2000 --port 9400 --infoport 9405  start
 }
 
-for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))} hthriftserver{0..$((${hthriftserverCount}-1))}");do
+stop_all(){
+  stop_all_regionserver
+  stop_all_master
+}
+
+stop_all_master(){
+  for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))}");do
+    stop_node ${name}
+  done
+}
+
+stop_all_regionserver(){
+  for name in $(eval "echo hregionserver{0..$((${hregionserverCount}-1))}");do
+    stop_node ${name}
+  done
+}
+
+stop_node(){
+  local name=${1:?"missing 'name'"};shift
   set +e +o pipefail
   docker kill ${name}
   docker rm ${name}
   set -e -o pipefail
-done
+}
 
-if [ -n "$bootstrap" ];then
+bootstrap(){
   ./hdfs dfs -rm -r /hbase
   docker exec -it zk0 /root/zk/bin/zkCli.sh -server localhost:2181 rmr /hbase
   rm -fr ${basedir}/hmaster*_tmp/*
   rm -fr ${basedir}/hregionserver*_tmp/*
   rm -fr ${basedir}/hthriftserver*_tmp/*
-  for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))} hthriftserver{0..$((${hthriftserverCount}-1))}");do
+  for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))}");do
     dat=${basedir:?"undefined"}/${name:?"undefined"}_tmp
     logs=${basedir:?"undefined"}/${name:?"undefined"}_logs
     mkdir -p ${dat}
     mkdir -p ${logs}
   done
+}
+
+start_all_master(){
+  for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))}");do
+    startHMaster $name
+  done
+}
+
+start_all_regionserver(){
+  for name in $(eval "echo hregionserver{0..$((${hregionserverCount}-1))}");do
+    startHRegionServer $name
+  done
+}
+start_all(){
+  start_all_master
+  start_all_regionserver
+}
+
+restart_node(){
+  local name=${1:?"missing 'name'"};shift
+  stop_node ${name}
+  start_node ${name}
+}
+
+start_node(){
+  local name=${1:?"missing 'name'"};shift
+  if startsWith ${name} "hmaster"; then
+    startHMaster ${name}
+  elif startsWith ${name} "hregionserver";then
+    startHRegionServer ${name}
+  else
+    :
+  fi
+}
+
+echo "choose cmd:"
+cmd=$(selectOption "start" "stop" "restart" "bootstrap" "start_all" "start_all_master" "start_all_regionserver" "stop_all" "stop_all_master" "stop_all_regionserver")
+
+if isIn ${cmd} "start|stop|restart"; then
+  echo "choose node:"
+  node=$(selectOption $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))}"))
+  echo ${cmd}_node ${node}
+  confirm
+  ${cmd}_node ${node}
+else
+  echo $cmd
+  confirm
+  $cmd
 fi
-
-for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))}");do
-  startHMaster $name
-done
-
-sleep 5
-
-for name in $(eval "echo hregionserver{0..$((${hregionserverCount}-1))}");do
-  startHRegionServer $name
-done
-
-#for name in $(eval "echo hthriftserver{0..$((${hthriftserverCount}-1))}");do
-#  startHThriftServer $name
-#done

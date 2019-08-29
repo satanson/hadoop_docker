@@ -10,17 +10,12 @@ cd  ${basedir}
 hadoopRoot=${basedir}/../hadoop_all/hadoop
 sparkRoot=${basedir}/../spark-2.4.3-bin-hadoop2.6
 
-dockerFlags="--rm -w /root -u root -e USER=root --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
-	-v ${hadoopRoot}:/root/hadoop
-  -v ${sparkRoot}:/root/spark
-  -v ${basedir}/spark_conf:/root/spark/conf
-  -v ${basedir}/spark_logs:/root/spark/logs
+dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
+	-v ${hadoopRoot}:/home/hdfs/hadoop
+  -v ${sparkRoot}:/home/hdfs/spark
+  -v ${basedir}/spark_conf:/home/hdfs/spark/conf
+  -v ${basedir}/spark_logs:/home/hdfs/spark/logs
   "
-
-for node in $(eval "echo yarnrm{0..$((${yarnRmCount}-1))} yarnnm{0..$((${yarnNmCount}-1))}");do
-	docker kill $node
-	docker rm $node
-done
 
 startNode(){
 	local name=$1;shift
@@ -38,22 +33,21 @@ startNode(){
   --hostname $name
   --ip $ip 
   -v ${PWD}/${name}_dat:${targetDataDir}
-  -v ${PWD}/${name}_log:/root/hadoop/logs
-  -v ${confDir}:/root/hadoop/etc/hadoop
-  -v ${PWD}/start_yarn_node.sh:/root/hadoop/start_yarn_node.sh
+  -v ${PWD}/${name}_log:/home/hdfs/hadoop/logs
+  -v ${confDir}:/home/hdfs/hadoop/etc/hadoop
   "
-	docker run $flags hadoop_debian:8.8 /root/hadoop/start_yarn_node.sh ${command}
+	docker run $flags hadoop_debian:8.8 /home/hdfs/hadoop/bin/yarn ${command}
 }
 
 start_yarnrm(){
 	local name=$1;shift
-	startNode $name "/root/yarnrm_data" ${PWD}/${name}_conf resourcemanager
+	startNode $name "/home/hdfs/yarnrm_data" ${PWD}/${name}_conf resourcemanager
 }
 
 
 start_yarnnm(){
 	local name=$1;shift
-	startNode $name "/root/yarnnm_data" ${PWD}/${name}_conf nodemanager
+	startNode $name "/home/hdfs/yarnnm_data" ${PWD}/${name}_conf nodemanager
 }
 
 
@@ -64,11 +58,17 @@ for name in $(eval "echo yarnrm{0..$((${yarnRmCount}-1))} yarnnm{0..$((${yarnNmC
   set -e -o pipefail
 done
 
+format(){
+  docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server localhost:2181 rmr /yarn-leader-election
+  docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server localhost:2181 rmr /yarnrm_rmstore
+  rm -fr ${PWD}/yarnrm*_dat/*
+  rm -fr ${PWD}/yarnnm*_dat/*
+  rm -fr ${PWD}/yarnrm*_log/*
+  rm -fr ${PWD}/yarnnm*_log/*
+}
+
 if [ -n "$bootstrap" ];then
-  sudo rm -fr ${PWD}/yarnrm*_dat/*
-  sudo rm -fr ${PWD}/yarnnm*_dat/*
-  sudo rm -fr ${PWD}/yarnrm*_log/*
-  sudo rm -fr ${PWD}/yarnnm*_log/*
+  format
 fi
 
 for name in $(eval "echo yarnrm{0..$((${yarnRmCount}-1))}");do

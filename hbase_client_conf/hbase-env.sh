@@ -131,5 +131,6 @@ export HBASE_OPTS="$HBASE_OPTS -XX:+UseConcMarkSweepGC"
 # HBASE_ROOT_LOGGER to "<DESIRED_LOG LEVEL>,DRFA".
 # For example:
 HBASE_ROOT_LOGGER=INFO,console
+export HBASE_CLASSPATH_PREFIX=${PWD}/../hadoop_all/hbck2/hbase-hbck2-1.0.0-SNAPSHOT.jar
 # The reason for changing default to RFA is to avoid the boundary case of filling out disk space as 
 # DRFA doesn't put any cap on the log size. Please refer to HBase-5655 for more context.

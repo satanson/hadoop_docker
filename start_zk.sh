@@ -20,18 +20,18 @@ done
 
 cd ${basedir}
 
-dockerFlags="-tid --rm -w /root -u root --privileged --net static_net
-  -v ${PWD}/hosts:/etc/hosts -v ${zkRoot}:/root/zk -v ${PWD}/zk_conf:/root/zk/conf"
+dockerFlags="-tid --rm -w /home/hdfs -u hdfs --privileged --net static_net
+  -v ${PWD}/hosts:/etc/hosts -v ${zkRoot}:/home/hdfs/zk -v ${PWD}/zk_conf:/home/hdfs/zk/conf"
 
 for node in $(eval "echo zk{0..$((${zkNum}-1))}") ;do
 	ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$node\b/" hosts)
   flags="
-  -v ${PWD}/${node}_data:/root/zk_data
+  -v ${PWD}/${node}_data:/home/hdfs/zk_data
   --name $node
   --hostname $node
   --ip $ip
   "
   myid=${node##zk}
   docker run ${dockerFlags} ${flags} hadoop_debian:8.8 \
-    bash -c "echo ${myid} > /root/zk_data/myid && cd /root/zk && bin/zkServer.sh start-foreground"
+    bash -c "echo ${myid} > /home/hdfs/zk_data/myid && cd /home/hdfs/zk && bin/zkServer.sh start-foreground"
 done
