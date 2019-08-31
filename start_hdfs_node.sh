@@ -10,8 +10,8 @@ if [ "x${command}x" != "xnamenodex" -a "x${command}x" != "xdatanodex" ];then
   exit 1
 fi
 
-base_dir=/root/hadoop
-cd $base_dir
+basedir=/home/hdfs/hadoop
+cd $basedir
 
 bin=`cd bin; pwd`
 

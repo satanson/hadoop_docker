@@ -35,8 +35,9 @@ startNode(){
   -v ${PWD}/${name}_dat:${targetDataDir}
   -v ${PWD}/${name}_log:/home/hdfs/hadoop/logs
   -v ${confDir}:/home/hdfs/hadoop/etc/hadoop
+  -v ${PWD}/start_yarn_node.sh:/home/hdfs/hadoop/start_yarn_node.sh
   "
-	docker run $flags hadoop_debian:8.8 /home/hdfs/hadoop/bin/yarn ${command}
+	docker run $flags hadoop_debian:8.8 /home/hdfs/hadoop/start_yarn_node.sh ${command}
 }
 
 start_yarnrm(){

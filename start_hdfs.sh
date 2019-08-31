@@ -29,8 +29,9 @@ startNode(){
   -v ${PWD}/${name}_dat:${targetDataDir}
   -v ${PWD}/${name}_logs:/home/hdfs/hadoop/logs
   -v ${confDir}:/home/hdfs/hadoop/etc/hadoop
+  -v ${PWD}/start_hdfs_node.sh:/home/hdfs/hadoop/start_hdfs_node.sh
   "
-	docker run $flags hadoop_debian:8.8 /home/hdfs/hadoop/bin/hdfs ${command}
+	docker run $flags hadoop_debian:8.8 /home/hdfs/hadoop/start_hdfs_node.sh ${command}
 }
 
 format(){

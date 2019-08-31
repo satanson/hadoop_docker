@@ -6,7 +6,7 @@ zkRoot=${basedir}/../hadoop_all/zookeeper
 
 set -e -o pipefail
 if [ -n "${bootstrap}" ];then
-  sudo rm -fr ${basedir:?"undefined"}/zk*_data/*
+  rm -fr ${basedir:?"undefined"}/zk*_data/*
 fi
 
 zkNum=3

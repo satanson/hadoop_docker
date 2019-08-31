@@ -9,10 +9,10 @@ if [ "x${command}x" != "xresourcemanagerx" -a "x${command}x" != "xnodemanagerx" 
   exit 1
 fi
 
-base_dir=/root/hadoop
-USER=root
+basedir=/home/hdfs/hadoop
+USER=hdfs
 
-cd $base_dir
+cd $basedir
 
 bin=`cd bin; pwd`
 
