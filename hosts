@@ -76,3 +76,6 @@
 192.168.110.195 ya_hregionserver5
 192.168.110.200 ya_hthriftserver0
 192.168.110.201 ya_hthriftserver1
+
+192.168.110.211 prometheus
+192.168.110.212 grafana

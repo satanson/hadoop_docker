@@ -41,7 +41,8 @@
 # Below are what we set by default.  May only work with SUN JVM.
 # For more on why as well as other possible settings,
 # see http://hbase.apache.org/book.html#performance
-export HBASE_OPTS="$HBASE_OPTS  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener"
+# export HBASE_OPTS="$HBASE_OPTS  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener"
+export HBASE_OPTS="$HBASE_OPTS -javaagent:/home/hdfs/hbase/lib/jmx_prometheus_javaagent-0.12.0.jar=8080:/home/hdfs/hbase/conf/config.yaml -agentlib:hprof=cpu=samples,depth=100,interval=20,lineno=y,thread=y,file=/home/hdfs/hbase/logs/out.hprof  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener"
 # export HBASE_OPTS="$HBASE_OPTS  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -javaagent:/home/hdfs/btrace/Twice-Cooked-Pork-agent.jar"
 # export HBASE_OPTS="$HBASE_OPTS -javaagent:/home/hdfs/btrace/build/btrace-agent.jar=script=/home/hdfs/btrace/com/grakra/HBaseBTracer.class -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC" 
 

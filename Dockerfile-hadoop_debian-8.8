@@ -18,4 +18,4 @@ RUN useradd -u 1000 -s /bin/bash -m hdfs
 RUN usermod -a -G sudo hdfs
 RUN echo hdfs ALL=(ALL) NOPASSWD : ALL > /etc/sudoers
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends iptables && rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y --no-install-recommends iptables net-tools && rm -rf /var/lib/apt/lists/*

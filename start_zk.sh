@@ -27,11 +27,14 @@ for node in $(eval "echo zk{0..$((${zkNum}-1))}") ;do
 	ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$node\b/" hosts)
   flags="
   -v ${PWD}/${node}_data:/home/hdfs/zk_data
+  -v ${PWD}/${node}_logs:/home/hdfs/zk/logs
   --name $node
   --hostname $node
   --ip $ip
   "
   myid=${node##zk}
+  rm -fr ${PWD}/${node}_logs/*
+  mkdir -p ${PWD}/${node}_logs
   docker run ${dockerFlags} ${flags} hadoop_debian:8.8 \
     bash -c "echo ${myid} > /home/hdfs/zk_data/myid && cd /home/hdfs/zk && bin/zkServer.sh start-foreground"
 done

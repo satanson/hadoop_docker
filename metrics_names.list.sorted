@@ -1,0 +1,1248 @@
+Hadoop_HBase_aboveHeapOccupancyLowWaterMarkCounter{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_Append_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_appendCount{name="RegionServer",sub="WAL",} 265034.0
+Hadoop_HBase_Append_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Append_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_AppendSize_25th_percentile{name="RegionServer",sub="WAL",} 154.0
+Hadoop_HBase_AppendSize_75th_percentile{name="RegionServer",sub="WAL",} 155.0
+Hadoop_HBase_AppendSize_90th_percentile{name="RegionServer",sub="WAL",} 155.0
+Hadoop_HBase_AppendSize_95th_percentile{name="RegionServer",sub="WAL",} 155.0
+Hadoop_HBase_AppendSize_98th_percentile{name="RegionServer",sub="WAL",} 155.0
+Hadoop_HBase_AppendSize_99_9th_percentile{name="RegionServer",sub="WAL",} 155.0
+Hadoop_HBase_AppendSize_99th_percentile{name="RegionServer",sub="WAL",} 155.0
+Hadoop_HBase_AppendSize_max{name="RegionServer",sub="WAL",} 155.0
+Hadoop_HBase_AppendSize_mean{name="RegionServer",sub="WAL",} 154.0
+Hadoop_HBase_AppendSize_median{name="RegionServer",sub="WAL",} 155.0
+Hadoop_HBase_AppendSize_min{name="RegionServer",sub="WAL",} 154.0
+Hadoop_HBase_AppendSize_num_ops{name="RegionServer",sub="WAL",} 265031.0
+Hadoop_HBase_AppendSize_SizeRangeCount_100_1000{name="RegionServer",sub="WAL",} 23.0
+Hadoop_HBase_AppendTime_25th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_75th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_90th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_95th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_98th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_99_9th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_99th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_max{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_mean{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_median{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_min{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_AppendTime_num_ops{name="RegionServer",sub="WAL",} 265034.0
+Hadoop_HBase_AppendTime_TimeRangeCount_0_1{name="RegionServer",sub="WAL",} 3.0
+Hadoop_HBase_authenticationFailures{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_authenticationFallbacks{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_authenticationSuccesses{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_authorizationFailures{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_authorizationSuccesses{name="RegionServer",sub="IPC",} 3.0
+Hadoop_HBase_averageRegionSize{name="RegionServer",sub="Server",} 1.3390906E7
+Hadoop_HBase_avgStoreFileAge{name="RegionServer",sub="Server",} 1.51803884E8
+Hadoop_HBase_blockCacheBloomChunkHitCount{name="RegionServer",sub="Server",} 530142.0
+Hadoop_HBase_blockCacheBloomChunkMissCount{name="RegionServer",sub="Server",} 2.0
+Hadoop_HBase_blockCacheCountHitPercent{name="RegionServer",sub="Server",} 99.99943777162659
+Hadoop_HBase_blockCacheCount{name="RegionServer",sub="Server",} 6.0
+Hadoop_HBase_blockCacheDataHitCount{name="RegionServer",sub="Server",} 530140.0
+Hadoop_HBase_blockCacheDataMissCount{name="RegionServer",sub="Server",} 4.0
+Hadoop_HBase_blockCacheDeleteFamilyBloomHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheDeleteFamilyBloomMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheEvictionCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheEvictionCountPrimary{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheExpressHitPercent{name="RegionServer",sub="Server",} 99.99943777162659
+Hadoop_HBase_blockCacheFailedInsertionCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheFileInfoHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheFileInfoMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheFreeSize{name="RegionServer",sub="Server",} 3.283847328E9
+Hadoop_HBase_blockCacheGeneralBloomMetaHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheGeneralBloomMetaMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheHitCount{name="RegionServer",sub="Server",} 1067178.0
+Hadoop_HBase_blockCacheHitCountPrimary{name="RegionServer",sub="Server",} 1067178.0
+Hadoop_HBase_blockCacheIntermediateIndexHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheIntermediateIndexMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheLeafIndexHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheLeafIndexMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheMetaHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheMetaMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheMissCount{name="RegionServer",sub="Server",} 6.0
+Hadoop_HBase_blockCacheMissCountPrimary{name="RegionServer",sub="Server",} 6.0
+Hadoop_HBase_blockCacheRootIndexHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheRootIndexMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheSize{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_blockCacheSize{name="RegionServer",sub="Server",} 2599520.0
+Hadoop_HBase_blockCacheTrailerHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_blockCacheTrailerMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_BlockedFlushes_25th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_75th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_90th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_95th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_98th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_99_9th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_99th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_max{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_mean{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_median{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_min{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_BlockedFlushes_num_ops{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_blockedFlushGauge{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_blockedRequestCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_15min_rate{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_1min_rate{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_5min_rate{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_count{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_mean_rate{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Bulkload_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_cellsCountCompactedFromMob{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_cellsCountCompactedToMob{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_cellsSizeCompactedFromMob{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_cellsSizeCompactedToMob{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndDelete_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CheckAndPut_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_checkMutateFailedCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_checkMutatePassedCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_compactedCellsCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_compactedCellsSize{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_compactedInputBytes{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_compactedOutputBytes{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputFileCount_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionInputSize_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputFileCount_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionOutputSize_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_compactionQueueLength{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_CompactionTime_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_25th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_75th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_90th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_95th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_98th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_99_9th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_99th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_max{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_mean{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_median{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_min{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseBlockCacheSize_num_ops{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_25th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_75th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_90th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_95th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_98th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_99_9th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_99th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_max{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_mean{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_median{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_min{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_DecreaseMemStoreSize_num_ops{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_Delete_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DeleteBatch_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Delete_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_DroppedPubAll{name="MetricsSystem",sub="Stats",} 0.0
+Hadoop_HBase_exceptions_callQueueTooBig{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions_FailedSanityCheckException{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions_multiResponseTooLarge{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions_NotServingRegionException{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions_OutOfOrderScannerNextException{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions_RegionMovedException{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions_RegionTooBusyException{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions_ScannerResetException{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_exceptions_UnknownScannerException{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_filteredReadRequestCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_flushedCellsCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_flushedCellsSize{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_flushedMemstoreBytes{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_flushedOutputBytes{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushMemstoreSize_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushOutputSize_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_flushQueueLength{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_FlushTime_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_fsChecksumFailureCount{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_25th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_75th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_90th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_95th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_98th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_99_9th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_99th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_max{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_mean{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_median{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_min{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsPReadTime_num_ops{name="RegionServer",sub="IO",} 6.0
+Hadoop_HBase_FsReadTime_25th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_75th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_90th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_95th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_98th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_99_9th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_99th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_max{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_mean{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_median{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_min{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsReadTime_num_ops{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_25th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_75th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_90th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_95th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_98th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_99_9th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_99th_percentile{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_max{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_mean{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_median{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_min{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_FsWriteTime_num_ops{name="RegionServer",sub="IO",} 0.0
+Hadoop_HBase_GcCountConcurrentMarkSweep{name="JvmMetrics",} 1.0
+Hadoop_HBase_GcCount{name="JvmMetrics",} 163.0
+Hadoop_HBase_GcCountParNew{name="JvmMetrics",} 162.0
+Hadoop_HBase_GcTimeMillisConcurrentMarkSweep{name="JvmMetrics",} 27.0
+Hadoop_HBase_GcTimeMillis{name="JvmMetrics",} 1863.0
+Hadoop_HBase_GcTimeMillisParNew{name="JvmMetrics",} 1836.0
+Hadoop_HBase_Get_25th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_75th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_90th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_95th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_98th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_99_9th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_99th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_GetGroupsAvgTime{name="UgiMetrics",} 0.0
+Hadoop_HBase_GetGroupsNumOps{name="UgiMetrics",} 0.0
+Hadoop_HBase_Get_max{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_mean{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_median{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_min{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Get_num_ops{name="RegionServer",sub="Server",} 530148.0
+Hadoop_HBase_Get_TimeRangeCount_0_1{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_hedgedReads{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_hedgedReadWins{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_hlogFileCount{name="RegionServer",sub="Server",} 55.0
+Hadoop_HBase_hlogFileSize{name="RegionServer",sub="Server",} 1.1383414E8
+Hadoop_HBase_IncreaseBlockCacheSize_25th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_75th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_90th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_95th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_98th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_99_9th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_99th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_max{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_mean{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_median{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_min{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseBlockCacheSize_num_ops{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_25th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_75th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_90th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_95th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_98th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_99_9th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_99th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_max{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_mean{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_median{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_min{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_IncreaseMemStoreSize_num_ops{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_Increment_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Increment_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_l1CacheHitCount{name="RegionServer",sub="Server",} 1067176.0
+Hadoop_HBase_l1CacheHitRatio{name="RegionServer",sub="Server",} 0.9999943777268026
+Hadoop_HBase_l1CacheMissCount{name="RegionServer",sub="Server",} 6.0
+Hadoop_HBase_l1CacheMissRatio{name="RegionServer",sub="Server",} 5.622273197499213E-6
+Hadoop_HBase_l2CacheHitCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_l2CacheHitRatio{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_l2CacheMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_l2CacheMissRatio{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_largeCompactionQueueLength{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_LogError{name="JvmMetrics",} 0.0
+Hadoop_HBase_LogFatal{name="JvmMetrics",} 0.0
+Hadoop_HBase_LoginFailureAvgTime{name="UgiMetrics",} 0.0
+Hadoop_HBase_LoginFailureNumOps{name="UgiMetrics",} 0.0
+Hadoop_HBase_LogInfo{name="JvmMetrics",} 0.0
+Hadoop_HBase_LoginSuccessAvgTime{name="UgiMetrics",} 0.0
+Hadoop_HBase_LoginSuccessNumOps{name="UgiMetrics",} 0.0
+Hadoop_HBase_LogWarn{name="JvmMetrics",} 0.0
+Hadoop_HBase_lowReplicaRollRequest{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_majorCompactedCellsCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_majorCompactedCellsSize{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_majorCompactedInputBytes{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_majorCompactedOutputBytes{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputFileCount_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionInputSize_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputFileCount_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionOutputSize_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_MajorCompactionTime_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_maxStoreFileAge{name="RegionServer",sub="Server",} 1.51803894E8
+Hadoop_HBase_MemHeapCommittedM{name="JvmMetrics",} 477.5625
+Hadoop_HBase_MemHeapMaxM{name="JvmMetrics",} 7835.5
+Hadoop_HBase_MemHeapUsedM{name="JvmMetrics",} 120.13375091552734
+Hadoop_HBase_MemMaxM{name="JvmMetrics",} 7835.5
+Hadoop_HBase_MemNonHeapCommittedM{name="JvmMetrics",} 88.234375
+Hadoop_HBase_MemNonHeapMaxM{name="JvmMetrics",} -9.5367431640625E-7
+Hadoop_HBase_MemNonHeapUsedM{name="JvmMetrics",} 86.16102600097656
+Hadoop_HBase_memStoreSize{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_memStoreSize{name="RegionServer",sub="Server",} 3.9975065E7
+Hadoop_HBase_minStoreFileAge{name="RegionServer",sub="Server",} 1.51803874E8
+Hadoop_HBase_mobFileCacheAccessCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobFileCacheCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobFileCacheEvictedCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobFileCacheHitPercent{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobFileCacheMissCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobFlushCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobFlushedCellsCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobFlushedCellsSize{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobScanCellsCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mobScanCellsSize{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mutationsWithoutWALCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_mutationsWithoutWALSize{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_25th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_75th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_90th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_95th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_98th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_99th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_max{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_mean{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_median{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_appendTime_num_ops{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_25th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_75th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_90th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_95th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_98th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_99th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_max{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_mean{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_median{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteBatchTime_num_ops{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_25th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_75th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_90th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_95th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_98th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_99th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_max{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_mean{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_median{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_deleteTime_num_ops{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_25th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_75th_percentile{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_90th_percentile{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_95th_percentile{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_98th_percentile{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_99th_percentile{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_max{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_mean{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_median{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_num_ops{name="RegionServer",sub="TableLatencies",} 530166.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_getTime_TimeRangeCount_0_1{name="RegionServer",sub="TableLatencies",} 2.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_25th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_75th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_90th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_95th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_98th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_99th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_max{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_mean{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_median{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_incrementTime_num_ops{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_memstoreSize{name="RegionServer",sub="Tables",} 3.992422E7
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_25th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_75th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_90th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_95th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_98th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_99th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_max{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_mean{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_median{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putBatchTime_num_ops{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_25th_percentile{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_75th_percentile{name="RegionServer",sub="TableLatencies",} 2.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_90th_percentile{name="RegionServer",sub="TableLatencies",} 3.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_95th_percentile{name="RegionServer",sub="TableLatencies",} 6.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_98th_percentile{name="RegionServer",sub="TableLatencies",} 6.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 6.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_99th_percentile{name="RegionServer",sub="TableLatencies",} 6.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_max{name="RegionServer",sub="TableLatencies",} 6.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_mean{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_median{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_num_ops{name="RegionServer",sub="TableLatencies",} 265022.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_TimeRangeCount_0_1{name="RegionServer",sub="TableLatencies",} 12.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_TimeRangeCount_1_3{name="RegionServer",sub="TableLatencies",} 4.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_putTime_TimeRangeCount_3_10{name="RegionServer",sub="TableLatencies",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_readRequestCount{name="RegionServer",sub="Tables",} 529310.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_25th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_75th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_90th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_95th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_98th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_99th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_max{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_mean{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_median{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanSize_num_ops{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_25th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_75th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_90th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_95th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_98th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_99_9th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_99th_percentile{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_max{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_mean{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_median{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_min{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_scanTime_num_ops{name="RegionServer",sub="TableLatencies",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_storeFileSize{name="RegionServer",sub="Tables",} 197654.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_tableSize{name="RegionServer",sub="Tables",} 4.0121874E7
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_totalRequestCount{name="RegionServer",sub="Tables",} 793894.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_metric_writeRequestCount{name="RegionServer",sub="Tables",} 264584.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_appendCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_avgStoreFileAge{name="RegionServer",sub="Regions",} 1.51776868E8
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_compactionsCompletedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_compactionsFailedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_compactionsQueuedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_deleteCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_filteredReadRequestCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_flushesQueuedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_getCount{name="RegionServer",sub="Regions",} 241299.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_incrementCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_lastMajorCompactionAge{name="RegionServer",sub="Regions",} 1.51805608E8
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_maxCompactionQueueSize{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_maxFlushQueueSize{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_maxStoreFileAge{name="RegionServer",sub="Regions",} 1.51776868E8
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_memStoreSize{name="RegionServer",sub="Regions",} 1.8026479E7
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_minStoreFileAge{name="RegionServer",sub="Regions",} 1.51776868E8
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_numBytesCompactedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_numFilesCompactedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_numReferenceFiles{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_putCount{name="RegionServer",sub="Regions",} 120504.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_readRequestCount{name="RegionServer",sub="Regions",} 241299.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_replicaid{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_scanCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_storeCount{name="RegionServer",sub="Regions",} 3.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_storeFileCount{name="RegionServer",sub="Regions",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_storeFileSize{name="RegionServer",sub="Regions",} 99597.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_1d80b6bbb0dc6c4e540ed509c8871fec_metric_writeRequestCount{name="RegionServer",sub="Regions",} 120504.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_appendCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_avgStoreFileAge{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_compactionsCompletedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_compactionsFailedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_compactionsQueuedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_deleteCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_filteredReadRequestCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_flushesQueuedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_getCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_incrementCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_lastMajorCompactionAge{name="RegionServer",sub="Regions",} 1.567480794974E12
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_maxCompactionQueueSize{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_maxFlushQueueSize{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_maxStoreFileAge{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_memStoreSize{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_minStoreFileAge{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_numBytesCompactedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_numFilesCompactedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_numReferenceFiles{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_putCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_readRequestCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_replicaid{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_scanCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_storeCount{name="RegionServer",sub="Regions",} 3.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_storeFileCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_storeFileSize{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_28cf39a543da01268b24c85134c75bc9_metric_writeRequestCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_appendCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_avgStoreFileAge{name="RegionServer",sub="Regions",} 1.51776848E8
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_compactionsCompletedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_compactionsFailedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_compactionsQueuedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_deleteCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_filteredReadRequestCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_flushesQueuedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_getCount{name="RegionServer",sub="Regions",} 288833.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_incrementCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_lastMajorCompactionAge{name="RegionServer",sub="Regions",} 1.51805636E8
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_maxCompactionQueueSize{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_maxFlushQueueSize{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_maxStoreFileAge{name="RegionServer",sub="Regions",} 1.51776848E8
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_memStoreSize{name="RegionServer",sub="Regions",} 2.1619645E7
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_minStoreFileAge{name="RegionServer",sub="Regions",} 1.51776848E8
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_numBytesCompactedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_numFilesCompactedCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_numReferenceFiles{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_putCount{name="RegionServer",sub="Regions",} 144504.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_readRequestCount{name="RegionServer",sub="Regions",} 288831.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_replicaid{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_scanCount{name="RegionServer",sub="Regions",} 0.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_storeCount{name="RegionServer",sub="Regions",} 3.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_storeFileCount{name="RegionServer",sub="Regions",} 1.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_storeFileSize{name="RegionServer",sub="Regions",} 98057.0
+Hadoop_HBase_Namespace_SYSTEM_table_test_region_68af116e8dc375e218b1b769e20c750b_metric_writeRequestCount{name="RegionServer",sub="Regions",} 144503.0
+
+
+Hadoop_HBase_NumAllSinks{name="MetricsSystem",sub="Stats",} 0.0
+Hadoop_HBase_NumActiveSinks{name="MetricsSystem",sub="Stats",} 0.0
+Hadoop_HBase_NumActiveSources{name="MetricsSystem",sub="Stats",} 11.0
+Hadoop_HBase_NumAllSources{name="MetricsSystem",sub="Stats",} 11.0
+Hadoop_HBase_numCallsInGeneralQueue{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numCallsInMetaPriorityQueue{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numCallsInPriorityQueue{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numCallsInReadQueue{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numCallsInReplicationQueue{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numCallsInScanQueue{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numCallsInWriteQueue{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numGeneralCallsDropped{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numLifoModeSwitches{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numOpenConnections{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_numReferenceFiles{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_numTables{name="RegionServer",sub="Tables",} 1.0
+Hadoop_HBase_pauseInfoThresholdExceeded{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithGc_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PauseTimeWithoutGc_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_pauseWarnThresholdExceeded{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_percentFilesLocal{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_percentFilesLocalSecondaryRegions{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ProcessCallTime_25th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_ProcessCallTime_75th_percentile{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_ProcessCallTime_90th_percentile{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_ProcessCallTime_95th_percentile{name="RegionServer",sub="IPC",} 2.0
+Hadoop_HBase_ProcessCallTime_98th_percentile{name="RegionServer",sub="IPC",} 3.0
+Hadoop_HBase_ProcessCallTime_99_9th_percentile{name="RegionServer",sub="IPC",} 2.0
+Hadoop_HBase_ProcessCallTime_99th_percentile{name="RegionServer",sub="IPC",} 2.0
+Hadoop_HBase_ProcessCallTime_max{name="RegionServer",sub="IPC",} 6.0
+Hadoop_HBase_ProcessCallTime_mean{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_ProcessCallTime_median{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_ProcessCallTime_min{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_ProcessCallTime_num_ops{name="RegionServer",sub="IPC",} 795204.0
+Hadoop_HBase_ProcessCallTime_TimeRangeCount_0_1{name="RegionServer",sub="IPC",} 2.0
+Hadoop_HBase_ProcessCallTime_TimeRangeCount_1_3{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_ProcessCallTime_TimeRangeCount_3_10{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_PublishAvgTime{name="MetricsSystem",sub="Stats",} 0.0
+Hadoop_HBase_PublishNumOps{name="MetricsSystem",sub="Stats",} 0.0
+Hadoop_HBase_Put_25th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_75th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_90th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_95th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_98th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_99_9th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_99th_percentile{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_PutBatch_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_PutBatch_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Put_max{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_mean{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_median{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_min{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_num_ops{name="RegionServer",sub="Server",} 265014.0
+Hadoop_HBase_Put_TimeRangeCount_0_1{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_Put_TimeRangeCount_3_10{name="RegionServer",sub="Server",} 1.0
+Hadoop_HBase_QueueCallTime_25th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_75th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_90th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_95th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_98th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_99_9th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_99th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_max{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_mean{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_median{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_min{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_QueueCallTime_num_ops{name="RegionServer",sub="IPC",} 795207.0
+Hadoop_HBase_QueueCallTime_TimeRangeCount_0_1{name="RegionServer",sub="IPC",} 3.0
+Hadoop_HBase_queueSize{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_readRequestCount{name="RegionServer",sub="Server",} 529949.0
+Hadoop_HBase_receivedBytes{name="RegionServer",sub="IPC",} 1.48139358E8
+Hadoop_HBase_regionCount{name="RegionServer",sub="Server",} 3.0
+Hadoop_HBase_regionServerStartTime{name="RegionServer",sub="Server",} 1.567476987834E12
+Hadoop_HBase_Replay_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_Replay_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_RequestSize_25th_percentile{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_75th_percentile{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_90th_percentile{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_95th_percentile{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_98th_percentile{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_99_9th_percentile{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_99th_percentile{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_max{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_mean{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_median{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_min{name="RegionServer",sub="IPC",} 142.0
+Hadoop_HBase_RequestSize_num_ops{name="RegionServer",sub="IPC",} 795207.0
+Hadoop_HBase_RequestSize_SizeRangeCount_100_1000{name="RegionServer",sub="IPC",} 3.0
+Hadoop_HBase_ResponseSize_25th_percentile{name="RegionServer",sub="IPC",} 5.0
+Hadoop_HBase_ResponseSize_75th_percentile{name="RegionServer",sub="IPC",} 1554.0
+Hadoop_HBase_ResponseSize_90th_percentile{name="RegionServer",sub="IPC",} 1555.0
+Hadoop_HBase_ResponseSize_95th_percentile{name="RegionServer",sub="IPC",} 1555.0
+Hadoop_HBase_ResponseSize_98th_percentile{name="RegionServer",sub="IPC",} 1555.0
+Hadoop_HBase_ResponseSize_99_9th_percentile{name="RegionServer",sub="IPC",} 1555.0
+Hadoop_HBase_ResponseSize_99th_percentile{name="RegionServer",sub="IPC",} 1555.0
+Hadoop_HBase_ResponseSize_max{name="RegionServer",sub="IPC",} 1556.0
+Hadoop_HBase_ResponseSize_mean{name="RegionServer",sub="IPC",} 1071.0
+Hadoop_HBase_ResponseSize_median{name="RegionServer",sub="IPC",} 1552.0
+Hadoop_HBase_ResponseSize_min{name="RegionServer",sub="IPC",} 2.0
+Hadoop_HBase_ResponseSize_num_ops{name="RegionServer",sub="IPC",} 795204.0
+Hadoop_HBase_ResponseSize_SizeRangeCount_0_10{name="RegionServer",sub="IPC",} 19.0
+Hadoop_HBase_ResponseSize_SizeRangeCount_1000_10000{name="RegionServer",sub="IPC",} 42.0
+Hadoop_HBase_rollRequest{name="RegionServer",sub="WAL",} 54.0
+Hadoop_HBase_rpcGetRequestCount{name="RegionServer",sub="Server",} 530144.0
+Hadoop_HBase_rpcMultiRequestCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_rpcMutateRequestCount{name="RegionServer",sub="Server",} 265013.0
+Hadoop_HBase_rpcScanRequestCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanSize_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_ScanTime_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_sentBytes{name="RegionServer",sub="IPC",} 8.35841774E8
+Hadoop_HBase_Sink_ageOfLastAppliedOp_25th_percentile{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_75th_percentile{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_90th_percentile{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_95th_percentile{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_98th_percentile{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_99_9th_percentile{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_99th_percentile{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_max{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_mean{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_median{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_min{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_Sink_ageOfLastAppliedOp_num_ops{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_sink_appliedBatches{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_sink_appliedHFiles{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_sink_appliedOps{name="RegionServer",sub="Replication",} 0.0
+Hadoop_HBase_slowAppendCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_slowAppendCount{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_slowDeleteCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_slowGetCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_slowIncrementCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_slowPutCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_smallCompactionQueueLength{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SnapshotAvgTime{name="MetricsSystem",sub="Stats",} 0.0
+Hadoop_HBase_SnapshotNumOps{name="MetricsSystem",sub="Stats",} 0.0
+Hadoop_HBase_splitQueueLength{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_splitRequestCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_splitSuccessCount{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_25th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_75th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_90th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_95th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_98th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_99_9th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_99th_percentile{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_max{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_mean{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_median{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_min{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_SplitTime_num_ops{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_staticBloomSize{name="RegionServer",sub="Server",} 256.0
+Hadoop_HBase_staticIndexSize{name="RegionServer",sub="Server",} 224.0
+Hadoop_HBase_storeCount{name="RegionServer",sub="Server",} 9.0
+Hadoop_HBase_storeFileCount{name="RegionServer",sub="Server",} 2.0
+Hadoop_HBase_storeFileIndexSize{name="RegionServer",sub="Server",} 912.0
+Hadoop_HBase_storeFileSize{name="RegionServer",sub="Server",} 197654.0
+Hadoop_HBase_SyncTime_25th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_SyncTime_75th_percentile{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_SyncTime_90th_percentile{name="RegionServer",sub="WAL",} 1.0
+Hadoop_HBase_SyncTime_95th_percentile{name="RegionServer",sub="WAL",} 2.0
+Hadoop_HBase_SyncTime_98th_percentile{name="RegionServer",sub="WAL",} 5.0
+Hadoop_HBase_SyncTime_99_9th_percentile{name="RegionServer",sub="WAL",} 5.0
+Hadoop_HBase_SyncTime_99th_percentile{name="RegionServer",sub="WAL",} 5.0
+Hadoop_HBase_SyncTime_max{name="RegionServer",sub="WAL",} 5.0
+Hadoop_HBase_SyncTime_mean{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_SyncTime_median{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_SyncTime_min{name="RegionServer",sub="WAL",} 0.0
+Hadoop_HBase_SyncTime_num_ops{name="RegionServer",sub="WAL",} 265031.0
+Hadoop_HBase_SyncTime_TimeRangeCount_0_1{name="RegionServer",sub="WAL",} 21.0
+Hadoop_HBase_SyncTime_TimeRangeCount_1_3{name="RegionServer",sub="WAL",} 1.0
+Hadoop_HBase_SyncTime_TimeRangeCount_3_10{name="RegionServer",sub="WAL",} 1.0
+Hadoop_HBase_ThreadsBlocked{name="JvmMetrics",} 0.0
+Hadoop_HBase_ThreadsNew{name="JvmMetrics",} 0.0
+Hadoop_HBase_ThreadsRunnable{name="JvmMetrics",} 29.0
+Hadoop_HBase_ThreadsTerminated{name="JvmMetrics",} 0.0
+Hadoop_HBase_ThreadsTimedWaiting{name="JvmMetrics",} 33.0
+Hadoop_HBase_ThreadsWaiting{name="JvmMetrics",} 247.0
+Hadoop_HBase_TotalCallTime_25th_percentile{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_TotalCallTime_75th_percentile{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_TotalCallTime_90th_percentile{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_TotalCallTime_95th_percentile{name="RegionServer",sub="IPC",} 2.0
+Hadoop_HBase_TotalCallTime_98th_percentile{name="RegionServer",sub="IPC",} 3.0
+Hadoop_HBase_TotalCallTime_99_9th_percentile{name="RegionServer",sub="IPC",} 6.0
+Hadoop_HBase_TotalCallTime_99th_percentile{name="RegionServer",sub="IPC",} 6.0
+Hadoop_HBase_TotalCallTime_max{name="RegionServer",sub="IPC",} 6.0
+Hadoop_HBase_TotalCallTime_mean{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_TotalCallTime_median{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_TotalCallTime_min{name="RegionServer",sub="IPC",} 0.0
+Hadoop_HBase_TotalCallTime_num_ops{name="RegionServer",sub="IPC",} 795204.0
+Hadoop_HBase_TotalCallTime_TimeRangeCount_0_1{name="RegionServer",sub="IPC",} 56.0
+Hadoop_HBase_TotalCallTime_TimeRangeCount_1_3{name="RegionServer",sub="IPC",} 4.0
+Hadoop_HBase_TotalCallTime_TimeRangeCount_3_10{name="RegionServer",sub="IPC",} 1.0
+Hadoop_HBase_totalRequestCount{name="RegionServer",sub="Server",} 795167.0
+Hadoop_HBase_totalRowActionRequestCount{name="RegionServer",sub="Server",} 794871.0
+Hadoop_HBase_tunerDoNothingCounter{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_25th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_75th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_90th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_95th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_98th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_99_9th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_99th_percentile{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_max{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_mean{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_median{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_min{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_UnblockedFlushes_num_ops{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_unblockedFlushGauge{name="RegionServer",sub="Memory",} 0.0
+Hadoop_HBase_updatesBlockedTime{name="RegionServer",sub="Server",} 0.0
+Hadoop_HBase_writeRequestCount{name="RegionServer",sub="Server",} 264922.0
+Hadoop_HBase_writtenBytes{name="RegionServer",sub="WAL",} 4.1052561E7
+java_lang_ClassLoading_LoadedClassCount 8414.0
+java_lang_ClassLoading_TotalLoadedClassCount 8414.0
+java_lang_ClassLoading_UnloadedClassCount 0.0
+java_lang_ClassLoading_Verbose 0.0
+java_lang_Compilation_CompilationTimeMonitoringSupported 1.0
+java_lang_Compilation_TotalCompilationTime 47438.0
+java_lang_GarbageCollector_CollectionCount{name="ConcurrentMarkSweep",} 1.0
+java_lang_GarbageCollector_CollectionCount{name="ParNew",} 162.0
+java_lang_GarbageCollector_CollectionTime{name="ConcurrentMarkSweep",} 27.0
+java_lang_GarbageCollector_CollectionTime{name="ParNew",} 1836.0
+java_lang_GarbageCollector_LastGcInfo_duration{name="ConcurrentMarkSweep",} 5065.0
+java_lang_GarbageCollector_LastGcInfo_duration{name="ParNew",} 13.0
+java_lang_GarbageCollector_LastGcInfo_endTime{name="ConcurrentMarkSweep",} 13367.0
+java_lang_GarbageCollector_LastGcInfo_endTime{name="ParNew",} 3804861.0
+java_lang_GarbageCollector_LastGcInfo_GcThreadCount{name="ConcurrentMarkSweep",} 11.0
+java_lang_GarbageCollector_LastGcInfo_GcThreadCount{name="ParNew",} 11.0
+java_lang_GarbageCollector_LastGcInfo_id{name="ConcurrentMarkSweep",} 1.0
+java_lang_GarbageCollector_LastGcInfo_id{name="ParNew",} 162.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ConcurrentMarkSweep",key="CMS Old Gen",} 3.4537472E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ConcurrentMarkSweep",key="Code Cache",} 5373952.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ConcurrentMarkSweep",key="Compressed Class Space",} 4186112.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ConcurrentMarkSweep",key="Metaspace",} 3.6347904E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ConcurrentMarkSweep",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ConcurrentMarkSweep",key="Par Survivor Space",} 1.7235968E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ParNew",key="CMS Old Gen",} 3.4537472E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ParNew",key="Code Cache",} 2.6476544E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ParNew",key="Compressed Class Space",} 6676480.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ParNew",key="Metaspace",} 5.9367424E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ParNew",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_committed{name="ParNew",key="Par Survivor Space",} 1.7235968E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ConcurrentMarkSweep",key="CMS Old Gen",} 3.4537472E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ConcurrentMarkSweep",key="Code Cache",} 2555904.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ConcurrentMarkSweep",key="Compressed Class Space",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ConcurrentMarkSweep",key="Metaspace",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ConcurrentMarkSweep",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ConcurrentMarkSweep",key="Par Survivor Space",} 1.7235968E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ParNew",key="CMS Old Gen",} 3.4537472E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ParNew",key="Code Cache",} 2555904.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ParNew",key="Compressed Class Space",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ParNew",key="Metaspace",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ParNew",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_init{name="ParNew",key="Par Survivor Space",} 1.7235968E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ConcurrentMarkSweep",key="CMS Old Gen",} 7.587954688E9
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ConcurrentMarkSweep",key="Code Cache",} 2.5165824E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ConcurrentMarkSweep",key="Compressed Class Space",} 1.073741824E9
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ConcurrentMarkSweep",key="Metaspace",} -1.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ConcurrentMarkSweep",key="Par Eden Space",} 5.58432256E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ConcurrentMarkSweep",key="Par Survivor Space",} 6.9730304E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ParNew",key="CMS Old Gen",} 7.587954688E9
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ParNew",key="Code Cache",} 2.5165824E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ParNew",key="Compressed Class Space",} 1.073741824E9
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ParNew",key="Metaspace",} -1.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ParNew",key="Par Eden Space",} 5.58432256E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_max{name="ParNew",key="Par Survivor Space",} 6.9730304E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ConcurrentMarkSweep",key="CMS Old Gen",} 5725368.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ConcurrentMarkSweep",key="Code Cache",} 5271872.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ConcurrentMarkSweep",key="Compressed Class Space",} 4059312.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ConcurrentMarkSweep",key="Metaspace",} 3.5630832E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ConcurrentMarkSweep",key="Par Eden Space",} 1.2980208E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ConcurrentMarkSweep",key="Par Survivor Space",} 1.723596E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ParNew",key="CMS Old Gen",} 8.8661432E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ParNew",key="Code Cache",} 2.6166656E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ParNew",key="Compressed Class Space",} 6278344.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ParNew",key="Metaspace",} 5.7901384E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ParNew",key="Par Eden Space",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageAfterGc_used{name="ParNew",key="Par Survivor Space",} 2493816.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ConcurrentMarkSweep",key="CMS Old Gen",} 3.4537472E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ConcurrentMarkSweep",key="Code Cache",} 4915200.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ConcurrentMarkSweep",key="Compressed Class Space",} 3092480.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ConcurrentMarkSweep",key="Metaspace",} 2.6566656E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ConcurrentMarkSweep",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ConcurrentMarkSweep",key="Par Survivor Space",} 1.7235968E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ParNew",key="CMS Old Gen",} 3.4537472E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ParNew",key="Code Cache",} 2.6476544E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ParNew",key="Compressed Class Space",} 6676480.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ParNew",key="Metaspace",} 5.9367424E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ParNew",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_committed{name="ParNew",key="Par Survivor Space",} 1.7235968E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ConcurrentMarkSweep",key="CMS Old Gen",} 3.4537472E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ConcurrentMarkSweep",key="Code Cache",} 2555904.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ConcurrentMarkSweep",key="Compressed Class Space",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ConcurrentMarkSweep",key="Metaspace",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ConcurrentMarkSweep",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ConcurrentMarkSweep",key="Par Survivor Space",} 1.7235968E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ParNew",key="CMS Old Gen",} 3.4537472E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ParNew",key="Code Cache",} 2555904.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ParNew",key="Compressed Class Space",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ParNew",key="Metaspace",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ParNew",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_init{name="ParNew",key="Par Survivor Space",} 1.7235968E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ConcurrentMarkSweep",key="CMS Old Gen",} 7.587954688E9
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ConcurrentMarkSweep",key="Code Cache",} 2.5165824E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ConcurrentMarkSweep",key="Compressed Class Space",} 1.073741824E9
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ConcurrentMarkSweep",key="Metaspace",} -1.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ConcurrentMarkSweep",key="Par Eden Space",} 5.58432256E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ConcurrentMarkSweep",key="Par Survivor Space",} 6.9730304E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ParNew",key="CMS Old Gen",} 7.587954688E9
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ParNew",key="Code Cache",} 2.5165824E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ParNew",key="Compressed Class Space",} 1.073741824E9
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ParNew",key="Metaspace",} -1.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ParNew",key="Par Eden Space",} 5.58432256E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_max{name="ParNew",key="Par Survivor Space",} 6.9730304E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ConcurrentMarkSweep",key="CMS Old Gen",} 0.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ConcurrentMarkSweep",key="Code Cache",} 4734528.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ConcurrentMarkSweep",key="Compressed Class Space",} 2973104.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ConcurrentMarkSweep",key="Metaspace",} 2.6126184E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ConcurrentMarkSweep",key="Par Eden Space",} 6.6017856E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ConcurrentMarkSweep",key="Par Survivor Space",} 1.4098376E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ParNew",key="CMS Old Gen",} 8.6442768E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ParNew",key="Code Cache",} 2.6166656E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ParNew",key="Compressed Class Space",} 6278344.0
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ParNew",key="Metaspace",} 5.7901384E7
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ParNew",key="Par Eden Space",} 1.38149888E8
+java_lang_GarbageCollector_LastGcInfo_memoryUsageBeforeGc_used{name="ParNew",key="Par Survivor Space",} 4573392.0
+java_lang_GarbageCollector_LastGcInfo_startTime{name="ConcurrentMarkSweep",} 8302.0
+java_lang_GarbageCollector_LastGcInfo_startTime{name="ParNew",} 3804848.0
+java_lang_GarbageCollector_Valid{name="ConcurrentMarkSweep",} 1.0
+java_lang_GarbageCollector_Valid{name="ParNew",} 1.0
+java_lang_Memory_HeapMemoryUsage_committed 5.00760576E8
+java_lang_Memory_HeapMemoryUsage_init 5.17996544E8
+java_lang_Memory_HeapMemoryUsage_max 8.216117248E9
+java_lang_Memory_HeapMemoryUsage_used 1.22792648E8
+java_lang_MemoryManager_Valid{name="CodeCacheManager",} 1.0
+java_lang_MemoryManager_Valid{name="Metaspace Manager",} 1.0
+java_lang_Memory_NonHeapMemoryUsage_committed 9.2520448E7
+java_lang_Memory_NonHeapMemoryUsage_init 2555904.0
+java_lang_Memory_NonHeapMemoryUsage_max -1.0
+java_lang_Memory_NonHeapMemoryUsage_used 9.0346384E7
+java_lang_Memory_ObjectPendingFinalizationCount 0.0
+java_lang_MemoryPool_CollectionUsage_committed{name="CMS Old Gen",} 3.4537472E8
+java_lang_MemoryPool_CollectionUsage_committed{name="Par Eden Space",} 1.38149888E8
+java_lang_MemoryPool_CollectionUsage_committed{name="Par Survivor Space",} 1.7235968E7
+java_lang_MemoryPool_CollectionUsage_init{name="CMS Old Gen",} 3.4537472E8
+java_lang_MemoryPool_CollectionUsage_init{name="Par Eden Space",} 1.38149888E8
+java_lang_MemoryPool_CollectionUsage_init{name="Par Survivor Space",} 1.7235968E7
+java_lang_MemoryPool_CollectionUsage_max{name="CMS Old Gen",} 7.587954688E9
+java_lang_MemoryPool_CollectionUsage_max{name="Par Eden Space",} 5.58432256E8
+java_lang_MemoryPool_CollectionUsage_max{name="Par Survivor Space",} 6.9730304E7
+java_lang_MemoryPool_CollectionUsageThresholdCount{name="CMS Old Gen",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdCount{name="Par Eden Space",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdCount{name="Par Survivor Space",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdExceeded{name="CMS Old Gen",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdExceeded{name="Par Eden Space",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdExceeded{name="Par Survivor Space",} 0.0
+java_lang_MemoryPool_CollectionUsageThreshold{name="CMS Old Gen",} 0.0
+java_lang_MemoryPool_CollectionUsageThreshold{name="Par Eden Space",} 0.0
+java_lang_MemoryPool_CollectionUsageThreshold{name="Par Survivor Space",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdSupported{name="CMS Old Gen",} 1.0
+java_lang_MemoryPool_CollectionUsageThresholdSupported{name="Code Cache",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdSupported{name="Compressed Class Space",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdSupported{name="Metaspace",} 0.0
+java_lang_MemoryPool_CollectionUsageThresholdSupported{name="Par Eden Space",} 1.0
+java_lang_MemoryPool_CollectionUsageThresholdSupported{name="Par Survivor Space",} 1.0
+java_lang_MemoryPool_CollectionUsage_used{name="CMS Old Gen",} 5725368.0
+java_lang_MemoryPool_CollectionUsage_used{name="Par Eden Space",} 0.0
+java_lang_MemoryPool_CollectionUsage_used{name="Par Survivor Space",} 2493816.0
+java_lang_MemoryPool_PeakUsage_committed{name="CMS Old Gen",} 3.4537472E8
+java_lang_MemoryPool_PeakUsage_committed{name="Code Cache",} 2.6476544E7
+java_lang_MemoryPool_PeakUsage_committed{name="Compressed Class Space",} 6676480.0
+java_lang_MemoryPool_PeakUsage_committed{name="Metaspace",} 5.9367424E7
+java_lang_MemoryPool_PeakUsage_committed{name="Par Eden Space",} 1.38149888E8
+java_lang_MemoryPool_PeakUsage_committed{name="Par Survivor Space",} 1.7235968E7
+java_lang_MemoryPool_PeakUsage_init{name="CMS Old Gen",} 3.4537472E8
+java_lang_MemoryPool_PeakUsage_init{name="Code Cache",} 2555904.0
+java_lang_MemoryPool_PeakUsage_init{name="Compressed Class Space",} 0.0
+java_lang_MemoryPool_PeakUsage_init{name="Metaspace",} 0.0
+java_lang_MemoryPool_PeakUsage_init{name="Par Eden Space",} 1.38149888E8
+java_lang_MemoryPool_PeakUsage_init{name="Par Survivor Space",} 1.7235968E7
+java_lang_MemoryPool_PeakUsage_max{name="CMS Old Gen",} 7.587954688E9
+java_lang_MemoryPool_PeakUsage_max{name="Code Cache",} 2.5165824E8
+java_lang_MemoryPool_PeakUsage_max{name="Compressed Class Space",} 1.073741824E9
+java_lang_MemoryPool_PeakUsage_max{name="Metaspace",} -1.0
+java_lang_MemoryPool_PeakUsage_max{name="Par Eden Space",} 5.58432256E8
+java_lang_MemoryPool_PeakUsage_max{name="Par Survivor Space",} 6.9730304E7
+java_lang_MemoryPool_PeakUsage_used{name="CMS Old Gen",} 8.8661432E7
+java_lang_MemoryPool_PeakUsage_used{name="Code Cache",} 2.6166656E7
+java_lang_MemoryPool_PeakUsage_used{name="Compressed Class Space",} 6278344.0
+java_lang_MemoryPool_PeakUsage_used{name="Metaspace",} 5.7901384E7
+java_lang_MemoryPool_PeakUsage_used{name="Par Eden Space",} 1.38149888E8
+java_lang_MemoryPool_PeakUsage_used{name="Par Survivor Space",} 1.723596E7
+java_lang_MemoryPool_Usage_committed{name="CMS Old Gen",} 3.4537472E8
+java_lang_MemoryPool_Usage_committed{name="Code Cache",} 2.6476544E7
+java_lang_MemoryPool_Usage_committed{name="Compressed Class Space",} 6676480.0
+java_lang_MemoryPool_Usage_committed{name="Metaspace",} 5.9367424E7
+java_lang_MemoryPool_Usage_committed{name="Par Eden Space",} 1.38149888E8
+java_lang_MemoryPool_Usage_committed{name="Par Survivor Space",} 1.7235968E7
+java_lang_MemoryPool_Usage_init{name="CMS Old Gen",} 3.4537472E8
+java_lang_MemoryPool_Usage_init{name="Code Cache",} 2555904.0
+java_lang_MemoryPool_Usage_init{name="Compressed Class Space",} 0.0
+java_lang_MemoryPool_Usage_init{name="Metaspace",} 0.0
+java_lang_MemoryPool_Usage_init{name="Par Eden Space",} 1.38149888E8
+java_lang_MemoryPool_Usage_init{name="Par Survivor Space",} 1.7235968E7
+java_lang_MemoryPool_Usage_max{name="CMS Old Gen",} 7.587954688E9
+java_lang_MemoryPool_Usage_max{name="Code Cache",} 2.5165824E8
+java_lang_MemoryPool_Usage_max{name="Compressed Class Space",} 1.073741824E9
+java_lang_MemoryPool_Usage_max{name="Metaspace",} -1.0
+java_lang_MemoryPool_Usage_max{name="Par Eden Space",} 5.58432256E8
+java_lang_MemoryPool_Usage_max{name="Par Survivor Space",} 6.9730304E7
+java_lang_MemoryPool_UsageThresholdCount{name="CMS Old Gen",} 0.0
+java_lang_MemoryPool_UsageThresholdCount{name="Code Cache",} 0.0
+java_lang_MemoryPool_UsageThresholdCount{name="Compressed Class Space",} 0.0
+java_lang_MemoryPool_UsageThresholdCount{name="Metaspace",} 0.0
+java_lang_MemoryPool_UsageThresholdExceeded{name="CMS Old Gen",} 0.0
+java_lang_MemoryPool_UsageThresholdExceeded{name="Code Cache",} 0.0
+java_lang_MemoryPool_UsageThresholdExceeded{name="Compressed Class Space",} 0.0
+java_lang_MemoryPool_UsageThresholdExceeded{name="Metaspace",} 0.0
+java_lang_MemoryPool_UsageThreshold{name="CMS Old Gen",} 0.0
+java_lang_MemoryPool_UsageThreshold{name="Code Cache",} 0.0
+java_lang_MemoryPool_UsageThreshold{name="Compressed Class Space",} 0.0
+java_lang_MemoryPool_UsageThreshold{name="Metaspace",} 0.0
+java_lang_MemoryPool_UsageThresholdSupported{name="CMS Old Gen",} 1.0
+java_lang_MemoryPool_UsageThresholdSupported{name="Code Cache",} 1.0
+java_lang_MemoryPool_UsageThresholdSupported{name="Compressed Class Space",} 1.0
+java_lang_MemoryPool_UsageThresholdSupported{name="Metaspace",} 1.0
+java_lang_MemoryPool_UsageThresholdSupported{name="Par Eden Space",} 0.0
+java_lang_MemoryPool_UsageThresholdSupported{name="Par Survivor Space",} 0.0
+java_lang_MemoryPool_Usage_used{name="CMS Old Gen",} 8.8661432E7
+java_lang_MemoryPool_Usage_used{name="Code Cache",} 2.6166656E7
+java_lang_MemoryPool_Usage_used{name="Compressed Class Space",} 6278344.0
+java_lang_MemoryPool_Usage_used{name="Metaspace",} 5.7901384E7
+java_lang_MemoryPool_Usage_used{name="Par Eden Space",} 3.16374E7
+java_lang_MemoryPool_Usage_used{name="Par Survivor Space",} 2493816.0
+java_lang_MemoryPool_Valid{name="CMS Old Gen",} 1.0
+java_lang_MemoryPool_Valid{name="Code Cache",} 1.0
+java_lang_MemoryPool_Valid{name="Compressed Class Space",} 1.0
+java_lang_MemoryPool_Valid{name="Metaspace",} 1.0
+java_lang_MemoryPool_Valid{name="Par Eden Space",} 1.0
+java_lang_MemoryPool_Valid{name="Par Survivor Space",} 1.0
+java_lang_Memory_Verbose 0.0
+java_lang_OperatingSystem_AvailableProcessors 8.0
+java_lang_OperatingSystem_CommittedVirtualMemorySize 1.0853625856E10
+java_lang_OperatingSystem_FreePhysicalMemorySize 2.53427712E8
+java_lang_OperatingSystem_FreeSwapSpaceSize 2.5335681024E10
+java_lang_OperatingSystem_MaxFileDescriptorCount 1048576.0
+java_lang_OperatingSystem_OpenFileDescriptorCount 274.0
+java_lang_OperatingSystem_ProcessCpuLoad 0.03788344906390085
+java_lang_OperatingSystem_ProcessCpuTime 9.8554E11
+java_lang_OperatingSystem_SystemCpuLoad 0.524608894357532
+java_lang_OperatingSystem_SystemLoadAverage 4.42
+java_lang_OperatingSystem_TotalPhysicalMemorySize 3.3137094656E10
+java_lang_OperatingSystem_TotalSwapSpaceSize 3.3746317312E10
+java_lang_Runtime_BootClassPathSupported 1.0
+java_lang_Runtime_StartTime 1.567476985012E12
+java_lang_Runtime_Uptime 3810118.0
+java_lang_Threading_CurrentThreadCpuTime 1.2146323922E10
+java_lang_Threading_CurrentThreadCpuTimeSupported 1.0
+java_lang_Threading_CurrentThreadUserTime 9.04E9
+java_lang_Threading_DaemonThreadCount 308.0
+java_lang_Threading_ObjectMonitorUsageSupported 1.0
+java_lang_Threading_PeakThreadCount 311.0
+java_lang_Threading_SynchronizerUsageSupported 1.0
+java_lang_Threading_ThreadAllocatedMemoryEnabled 1.0
+java_lang_Threading_ThreadAllocatedMemorySupported 1.0
+java_lang_Threading_ThreadContentionMonitoringEnabled 0.0
+java_lang_Threading_ThreadContentionMonitoringSupported 1.0
+java_lang_Threading_ThreadCpuTimeEnabled 1.0
+java_lang_Threading_ThreadCpuTimeSupported 1.0
+java_lang_Threading_TotalStartedThreadCount 663.0
+java_lang_Threading_ThreadCount 309.0
+jmx_config_reload_failure_total 0.0
+jmx_config_reload_success_total 0.0
+jmx_scrape_duration_seconds 0.414672528
+jmx_scrape_error 0.0

@@ -1,0 +1,28 @@
+global:
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: codelab-monitor
+scrape_configs:
+- job_name: prometheus
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  metrics_path: /metrics
+  scheme: http
+  static_configs:
+  - targets:
+    - 0.0.0.0:9090
+- job_name: jmx_exporter
+  scrape_interval: 15s
+  scrape_timeout: 10s
+  metrics_path: /metrics
+  scheme: http
+  static_configs:
+  - targets:
+    - hregionserver0:8080
+    - hregionserver1:8080
+    - hregionserver2:8080
+    - hregionserver3:8080
+    - hregionserver4:8080
+    - hregionserver5:8080

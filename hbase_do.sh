@@ -45,17 +45,17 @@ startNode(){
   -v ${PWD}/${name}_logs:/home/hdfs/hbase/logs
   -v ${confDir}:/home/hdfs/hbase/conf
   "
-	docker run $flags hadoop_debian:8.8 /home/hdfs/hbase/bin/hbase ${command}
+	docker run $flags hadoop_debian:8.8 /bin/bash -c "/home/hdfs/hbase/bin/hbase-daemon.sh start ${command} && sleep 100000"
 }
 
 startHMaster(){
 	local name=$1;shift
-	startNode $name ${PWD}/hbase_conf master start
+	startNode $name ${PWD}/hbase_conf master 
 }
 
 startHRegionServer(){
 	local name=$1;shift
-	startNode $name ${PWD}/hbase_conf regionserver start
+	startNode $name ${PWD}/hbase_conf regionserver
 }
 
 startHThriftServer(){
