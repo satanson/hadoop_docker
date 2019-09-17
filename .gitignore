@@ -10,3 +10,5 @@ jdk
 cit-HepTh.txt
 mysqld/data
 mysqld/run
+*.txt
+h*_systmp/

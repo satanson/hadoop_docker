@@ -1,2 +1,5 @@
 #!/bin/bash
-/home/grakra/workspace/hadoop-2.6.0-cdh5.7.0/bin/hadoop --config /home/grakra/workspace/hadoop2.6_docker/hadoop_conf_client/ $@
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+cd ${basedir}
+hadoopDir=$(cd ${basedir}/../hadoop_all/hadoop;pwd)
+${hadoopDir}/bin/hadoop --config ${basedir}/hadoop_conf_client/ $@

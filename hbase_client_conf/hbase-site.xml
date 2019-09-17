@@ -33,7 +33,12 @@
 
     <property>
         <name>hbase.zookeeper.quorum</name>
-        <value>zk0:2181,zk1:2181,zk2:2181</value>
+        <value>zk0,zk1,zk2</value>
+    </property>
+
+    <property>
+      <name>hbase.zookeeper.port</name>
+      <value>2181</value>
     </property>
 
     <property>
@@ -94,5 +99,10 @@
     <property>
       <name>phoenix.schema.mapSystemTablesToNamespace</name>
       <value>true</value>
+    </property>
+
+    <property>
+      <name>mapreduce.framework.name</name>
+      <value>yarn</value>
     </property>
 </configuration>
