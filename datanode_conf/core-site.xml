@@ -17,19 +17,29 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
- <property>
- <name>fs.defaultFS</name>
- <value>hdfs://grakrabackend</value>
- </property>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://grakrabackend</value>
+  </property>
 
- <property>
- <name>fs.checkpoint.period</name>
- <value>3600</value>
- </property>
+  <property>
+    <name>fs.checkpoint.period</name>
+    <value>3600</value>
+  </property>
 
- <property>
- <name>fs.checkpoint.size</name>
- <value>67108864</value>
- </property>
+  <property>
+    <name>fs.checkpoint.size</name>
+    <value>67108864</value>
+  </property>
+
+  <property>
+    <name>hadoop.proxyuser.grakra.hosts</name>
+    <value>*</value>
+  </property>
+
+  <property>
+    <name>hadoop.proxyuser.grakra.groups</name>
+    <value>*</value>
+  </property>
 
 </configuration>
