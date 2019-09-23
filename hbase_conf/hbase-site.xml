@@ -110,4 +110,31 @@
     <name>hbase.regionserver.wal.codec</name>
     <value>org.apache.hadoop.hbase.regionserver.wal.IndexedWALEditCodec</value>
   </property>
+
+  <property>
+    <name>hbase.region.replica.replication.enabled</name>
+    <value>false</value>
+  </property>
+
+  <property>
+    <name>hbase.regionserver.storefile.refresh.period</name>
+    <value>10000</value>
+  </property>
+
+  <property>
+    <name>hbase.ipc.client.allowsInterrupt</name>
+    <value>true</value>
+    <description>Whether to enable interruption of RPC threads at the client. The default value of true is
+      required to enable Primary RegionServers to access other RegionServers in secondary mode. </description>
+  </property>
+
+  <property>
+    <name>hbase.client.primaryCallTimeout.get</name>
+    <value>10</value>
+  </property>
+
+  <property>
+    <name>hbase.client.primaryCallTimeout.multiget</name>
+    <value>10</value>
+  </property>
 </configuration>
