@@ -42,7 +42,7 @@
 # For more on why as well as other possible settings,
 # see http://hbase.apache.org/book.html#performance
 # export HBASE_OPTS="$HBASE_OPTS  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener"
-export HBASE_OPTS="$HBASE_OPTS -javaagent:/home/hdfs/hbase/lib/jmx_prometheus_javaagent-0.12.0.jar=8080:/home/hdfs/hbase/conf/config.yaml -agentlib:hprof=cpu=samples,depth=100,interval=20,lineno=y,thread=y,file=/home/hdfs/hbase/logs/out.hprof  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener"
+export HBASE_OPTS="$HBASE_OPTS -javaagent:/home/hdfs/hbase/lib/jmx_prometheus_javaagent-0.12.0.jar=8080:/home/hdfs/hbase/conf/config.yaml -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener"
 # export HBASE_OPTS="$HBASE_OPTS  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -javaagent:/home/hdfs/btrace/Twice-Cooked-Pork-agent.jar"
 # export HBASE_OPTS="$HBASE_OPTS -javaagent:/home/hdfs/btrace/build/btrace-agent.jar=script=/home/hdfs/btrace/com/grakra/HBaseBTracer.class -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC" 
 
@@ -101,6 +101,8 @@ export HBASE_REGIONSERVER_OPTS="$HBASE_REGIONSERVER_OPTS $HBASE_JMX_BASE -Dcom.s
 # Extra ssh options.  Empty by default.
 # export HBASE_SSH_OPTS="-o ConnectTimeout=1 -o SendEnv=HBASE_CONF_DIR"
 
+export LD_LIBRARY_PATH=/home/hdfs/hadoop/lib/native:${LD_LIBRARY_PATH}
+
 # Where log files are stored.  $HBASE_HOME/logs by default.
 export HBASE_LOG_DIR=${HBASE_HOME}/logs
 
@@ -133,6 +135,6 @@ export HBASE_IDENT_STRING=$USER-$(hostname)
 # In case one needs to do log rolling on a date change, one should set the environment property
 # HBASE_ROOT_LOGGER to "<DESIRED_LOG LEVEL>,DRFA".
 # For example:
-HBASE_ROOT_LOGGER=INFO,console,DRFA
+HBASE_ROOT_LOGGER=INFO,console,RFA
 # The reason for changing default to RFA is to avoid the boundary case of filling out disk space as 
 # DRFA doesn't put any cap on the log size. Please refer to HBase-5655 for more context.

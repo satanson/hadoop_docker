@@ -1,12 +1,12 @@
 create schema if NOT EXISTS foobar;
 CREATE TABLE IF NOT EXISTS foobar.emp (
-     id INTEGER NOT NULL PRIMARY KEY,
+     pk INTEGER NOT NULL PRIMARY KEY,
      name VARCHAR,
      age INTEGER,
      gender VARCHAR,
      boss VARCHAR,
      email VARCHAR
-     );
+  ) compression='snappy',UPDATE_CACHE_FREQUENCY=30000, COLUMN_ENCODED_BYTES=0;
 
 CREATE SEQUENCE emp_id;
 UPSERT INTO foobar.EMP VALUES( NEXT VALUE FOR emp_id, 'alice', 31, 'M', 'dave', 'alice@gmail.com');

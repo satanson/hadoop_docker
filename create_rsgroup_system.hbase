@@ -1,14 +1,14 @@
-create_namespace 'SYSTEM'
-create 'SYSTEM:test', 'f0', 'f1', 'f2', SPLITS=>["user0", "user1", "user2","user3", "user4", "user5", "user6", "user7", "user8", "user9"]
-put 'SYSTEM:test', 'r1', 'f0', 'foobar'
-put 'SYSTEM:test', 'r2', 'f1', 'foobaz'
-put 'SYSTEM:test', 'r3', 'f2', 'foobuzz'
-put 'SYSTEM:test', 'r1', 'f1', 'deadbeef'
-scan 'SYSTEM:test'
-add_rsgroup 'SYSTEM'
+create_namespace 'general_rsg'
+create 'general_rsg:test', 'f0', 'f1', 'f2', SPLITS=>["user0", "user1", "user2","user3", "user4", "user5", "user6", "user7", "user8", "user9"]
+put 'general_rsg:test', 'r1', 'f0', 'foobar'
+put 'general_rsg:test', 'r2', 'f1', 'foobaz'
+put 'general_rsg:test', 'r3', 'f2', 'foobuzz'
+put 'general_rsg:test', 'r1', 'f1', 'deadbeef'
+scan 'general_rsg:test'
+add_rsgroup 'general_rsg'
 list_rsgroups
-move_servers_rsgroup 'SYSTEM', ['hregionserver0:6310','hregionserver1:6310','hregionserver2:6310']
+move_servers_rsgroup 'general_rsg', ['hregionserver0:6310','hregionserver1:6310','hregionserver2:6310']
 list_rsgroups
-move_namespaces_rsgroup 'SYSTEM', ['SYSTEM']
+move_namespaces_rsgroup 'general_rsg', ['general_rsg']
 list_rsgroups
-scan 'SYSTEM:test'
+scan 'general_rsg:test'

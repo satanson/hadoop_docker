@@ -8,6 +8,7 @@ hthriftserverCount=2
 
 cd  ${basedir}
 
+hadoopRoot=$(readlink -f ${basedir}/../hadoop_all/hadoop)
 hbaseRoot=$(readlink -f ${basedir}/../hadoop_all/hbase)
 
 dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net 
@@ -19,6 +20,8 @@ dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_n
 	-v ${hbaseRoot}:/home/hdfs/hbase
   -v ${BTRACE_HOME}:/home/hdfs/btrace
   -v ${HOME}/.greys:/home/hdfs/.greys
+  -v ${hadoopRoot}:/home/hdfs/hadoop
+  -v /usr/lib:/usr/lib
   "
 
 startNode(){
@@ -69,7 +72,7 @@ done
 
 if [ -n "$bootstrap" ];then
   ./hdfs dfs -rm -r /hbase
-  docker exec -it zk0 /root/zk/bin/zkCli.sh -server localhost:2181 rmr /hbase
+  docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server localhost:2181 rmr /hbase
   rm -fr ${basedir}/hmaster*_tmp/*
   rm -fr ${basedir}/hregionserver*_tmp/*
   rm -fr ${basedir}/hthriftserver*_tmp/*

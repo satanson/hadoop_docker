@@ -2,5 +2,6 @@
 script=$(readlink -f ${BASE_SOURCE:-$0})
 basedir=$(cd $(dirname ${script});pwd)
 cd ${basedir}
-HBASE_DEPLOY=${basedir}/../hadoop_all/hbase
-${HBASE_DEPLOY}/bin/hbase --config ${basedir}/hbase_client_conf/ $*
+export HADOOP_HOME=$(readlink -f ${basedir}/../hadoop_all/hadoop)
+export HBASE_HOME=$(readlink -f ${basedir}/../hadoop_all/hbase)
+${HBASE_HOME}/bin/hbase --config ${basedir}/hbase_client_conf/ $*

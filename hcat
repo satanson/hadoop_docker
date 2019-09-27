@@ -9,4 +9,5 @@ export HBASE_HOME=$(cd ${basedir}/../hadoop_all/hbase;pwd)
 export HBASE_CONF_DIR=${basedir}/hbase_client_conf
 export HIVE_HOME=$(cd ${basedir}/../hadoop_all/hive;pwd)
 export HIVE_CONF_DIR=${basedir}/hive_conf
-${HIVE_HOME}/bin/beeline -u jdbc:hive2://localhost:10000
+export HCAT_LOG_DIR=${basedir}/hcatlog_log
+${HIVE_HOME}/hcatalog/bin/hcat --config ${HIVE_CONF_DIR} -e 'show tables;'

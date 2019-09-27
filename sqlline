@@ -2,6 +2,10 @@
 script=$(readlink -f ${BASH_SOURCE:-$0})
 basedir=$(cd $(dirname ${script});pwd)
 cd ${basedir}
-HBASE_HOME=$(readlink -f ${basedir}/../hadoop_all/hbase)
-PHOENIX_HOME=$(readlink -f ${basedir}/../hadoop_all/phoenix)
+export HADOOP_HOME=$(readlink -f ${basedir}/../hadoop_all/hadoop)
+export HBASE_HOME=$(readlink -f ${basedir}/../hadoop_all/hbase)
+export PHOENIX_HOME=$(readlink -f ${basedir}/../hadoop_all/phoenix)
+export JAVA_HOME=${JAVA_HOME}
+export PATH=${JAVA_HOME}/bin:${PATH}
+export LD_LIBRARY_PATH=${HADOOP_HOME}/lib/native:${LD_LIBRARY_PATH}
 env HBASE_HOME=${HBASE_HOME} HBASE_CONF_DIR=${basedir}/hbase_client_conf python2 ${PHOENIX_HOME}/bin/sqlline.py  zk0:2181/hbase $*

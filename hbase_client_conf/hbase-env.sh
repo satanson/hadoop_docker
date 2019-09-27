@@ -41,7 +41,10 @@
 # Below are what we set by default.  May only work with SUN JVM.
 # For more on why as well as other possible settings,
 # see http://hbase.apache.org/book.html#performance
-export HBASE_OPTS="$HBASE_OPTS -XX:+UseConcMarkSweepGC"
+# export HBASE_OPTS="$HBASE_OPTS  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener"
+export HBASE_OPTS="$HBASE_OPTS  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener"
+# export HBASE_OPTS="$HBASE_OPTS  -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -javaagent:/home/hdfs/btrace/Twice-Cooked-Pork-agent.jar"
+# export HBASE_OPTS="$HBASE_OPTS -javaagent:/home/hdfs/btrace/build/btrace-agent.jar=script=/home/hdfs/btrace/com/grakra/HBaseBTracer.class -Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC" 
 
 # Uncomment one of the below three options to enable java garbage collection logging for the server-side processes.
 
@@ -78,9 +81,9 @@ export HBASE_OPTS="$HBASE_OPTS -XX:+UseConcMarkSweepGC"
 # NOTE: HBase provides an alternative JMX implementation to fix the random ports issue, please see JMX
 # section in HBase Reference Guide for instructions.
 
-# export HBASE_JMX_BASE="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
-# export HBASE_MASTER_OPTS="$HBASE_MASTER_OPTS $HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=10101"
-# export HBASE_REGIONSERVER_OPTS="$HBASE_REGIONSERVER_OPTS $HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=10102"
+export HBASE_JMX_BASE="-Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
+export HBASE_MASTER_OPTS="$HBASE_MASTER_OPTS $HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=10101"
+export HBASE_REGIONSERVER_OPTS="$HBASE_REGIONSERVER_OPTS $HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=10102"
 # export HBASE_THRIFT_OPTS="$HBASE_THRIFT_OPTS $HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=10103"
 # export HBASE_ZOOKEEPER_OPTS="$HBASE_ZOOKEEPER_OPTS $HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=10104"
 # export HBASE_REST_OPTS="$HBASE_REST_OPTS $HBASE_JMX_BASE -Dcom.sun.management.jmxremote.port=10105"
@@ -97,9 +100,9 @@ export HBASE_OPTS="$HBASE_OPTS -XX:+UseConcMarkSweepGC"
 
 # Extra ssh options.  Empty by default.
 # export HBASE_SSH_OPTS="-o ConnectTimeout=1 -o SendEnv=HBASE_CONF_DIR"
-
+export LD_LIBRARY_PATH=${HADOOP_HOME}/lib/native:${LD_LIBRARY_PATH}
 # Where log files are stored.  $HBASE_HOME/logs by default.
-# export HBASE_LOG_DIR=${HBASE_HOME}/logs
+export HBASE_LOG_DIR=${HBASE_HOME}/logs
 
 # Enable remote JDWP debugging of major HBase processes. Meant for Core Developers 
 # export HBASE_MASTER_OPTS="$HBASE_MASTER_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8070"
@@ -109,7 +112,7 @@ export HBASE_OPTS="$HBASE_OPTS -XX:+UseConcMarkSweepGC"
 # export HBASE_REST_OPTS="$HBASE_REST_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8074"
 
 # A string representing this instance of hbase. $USER by default.
-# export HBASE_IDENT_STRING=$USER
+export HBASE_IDENT_STRING=$USER-$(hostname)
 
 # The scheduling priority for daemon processes.  See 'man nice'.
 # export HBASE_NICENESS=10
@@ -130,7 +133,6 @@ export HBASE_OPTS="$HBASE_OPTS -XX:+UseConcMarkSweepGC"
 # In case one needs to do log rolling on a date change, one should set the environment property
 # HBASE_ROOT_LOGGER to "<DESIRED_LOG LEVEL>,DRFA".
 # For example:
-HBASE_ROOT_LOGGER=INFO,console
-export HBASE_CLASSPATH_PREFIX=${PWD}/../hadoop_all/hbck2/hbase-hbck2-1.0.0-SNAPSHOT.jar
+HBASE_ROOT_LOGGER=INFO,console,RFA
 # The reason for changing default to RFA is to avoid the boundary case of filling out disk space as 
 # DRFA doesn't put any cap on the log size. Please refer to HBase-5655 for more context.
