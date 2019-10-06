@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-set -e -o pipefail
+set -x -e -o pipefail
 
 export LANG=en_US.UTF-8
 ulimit -c 10485760
 
-command=${1:?"namenode|datanode"};shift
-if [ "x${command}x" != "xnamenodex" -a "x${command}x" != "xdatanodex" ];then
-  echo "command should be namenode|datanode" >&2
+command=${1:?"namenode|datanode|journalnode"};shift
+if [ "x${command}x" != "xnamenodex" -a "x${command}x" != "xdatanodex" -a "x${command}x" != "xjournalnodex" ];then
+  echo "command should be namenode|datanode|journalnode" >&2
   exit 1
 fi
 

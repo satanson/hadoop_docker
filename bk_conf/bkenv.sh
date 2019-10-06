@@ -32,7 +32,7 @@
 # BOOKIE_LOG_CONF=
 
 # Logs location
-BOOKIE_LOG_DIR=/root/bk_logs
+BOOKIE_LOG_DIR=/home/hdfs/bk_logs
 BOOKIE_ROOT_LOGGER="INFO,CONSOLE,ROLLINGFILE"
 
 # Extra options to be passed to the jvm

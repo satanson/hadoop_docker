@@ -4,7 +4,7 @@ bootstrap=$1;shift
 
 cd ${basedir}
 bkRoot=$(readlink -f ${basedir}/../hadoop_all/bookkeeper-server)
-bkNum=3
+bkNum=5
 
 for node in $(eval "echo bk{0..$((${bkNum}-1))}");do
 	docker kill $node
@@ -32,6 +32,7 @@ for node in $(eval "echo bk{0..$((${bkNum}-1))}") ;do
 	ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$node\b/" hosts)
   mkdir -p ${PWD}/${node}_dat
   mkdir -p ${PWD}/${node}_logs
+  rm -fr ${PWD:?"undefined 'PWD'"}/${node:?"undefined 'node'"}_logs/*log*
   flags="
   -v ${PWD}/${node}_dat:/home/hdfs/bk_dat
   -v ${PWD}/${node}_logs:/home/hdfs/bk_logs

@@ -19,3 +19,5 @@ RUN usermod -a -G sudo hdfs
 RUN echo hdfs ALL=(ALL) NOPASSWD : ALL > /etc/sudoers
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends iptables net-tools && rm -rf /var/lib/apt/lists/*
+RUN sed -i -e '$a\TZ='Asia/Shanghai'; export TZ' /home/hdfs/.profile
+RUN cp  /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
