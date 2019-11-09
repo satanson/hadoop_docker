@@ -25,7 +25,7 @@ if [ -n ${bootstrap} ];then
 fi
 
 set -e -o pipefail
-dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
+dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net0 -v ${PWD}/hosts:/etc/hosts 
 	-v ${hadoopRoot}:/home/hdfs/hadoop
   "
 

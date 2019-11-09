@@ -2,8 +2,8 @@
 basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
 cd ${basedir}
 
-#dockerFlags="--name mysqld --net static_net --ip 192.168.110.100 --rm -v ${PWD}/mysqld:/root/mysqld -v ${PWD}/my.cnf:/etc/mysql/my.cnf -u root -w /root"
-dockerFlags="--name mysqld --net static_net --ip 192.168.110.100 --rm -v ${PWD}/mysqld_data:/root/mysqld_data -v ${PWD}/mysqld_conf:/etc/mysql  -u root -w /root"
+#dockerFlags="--name mysqld --net static_net0 --ip 192.168.172.100 --rm -v ${PWD}/mysqld:/root/mysqld -v ${PWD}/my.cnf:/etc/mysql/my.cnf -u root -w /root"
+dockerFlags="--name mysqld --net static_net0 --ip 192.168.172.100 --rm -v ${PWD}/mysqld_data:/root/mysqld_data -v ${PWD}/mysqld_conf:/etc/mysql  -u root -w /root"
 image=mysql:8.0
 
 docker kill mysqld

@@ -10,7 +10,7 @@ cd  ${basedir}
 hadoopRoot=${basedir}/../hadoop_all/hadoop
 sparkRoot=${basedir}/../spark-2.4.3-bin-hadoop2.6
 
-dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
+dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net0 -v ${PWD}/hosts:/etc/hosts 
 	-v ${hadoopRoot}:/home/hdfs/hadoop
   -v ${sparkRoot}:/home/hdfs/spark
   -v ${basedir}/spark_conf:/home/hdfs/spark/conf

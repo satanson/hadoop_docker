@@ -17,7 +17,7 @@ if [ -n "${bootstrap}" ];then
 fi
 
 zkNum=3
-dockerFlags="-tid --rm -w /home/hdfs -u hdfs --privileged --net static_net
+dockerFlags="-tid --rm -w /home/hdfs -u hdfs --privileged --net static_net0
   -v ${PWD}/hosts:/etc/hosts -v ${zkRoot}:/home/hdfs/zk -v ${PWD}/zk_conf:/home/hdfs/zk/conf"
 
 stop_node(){

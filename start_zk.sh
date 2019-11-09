@@ -20,7 +20,7 @@ done
 
 cd ${basedir}
 
-dockerFlags="-tid --rm -w /home/hdfs -u hdfs --privileged --net static_net
+dockerFlags="-tid --rm -w /home/hdfs -u hdfs --privileged --net static_net0
   -v ${PWD}/hosts:/etc/hosts -v ${zkRoot}:/home/hdfs/zk -v ${PWD}/zk_conf:/home/hdfs/zk/conf"
 
 for node in $(eval "echo zk{0..$((${zkNum}-1))}") ;do

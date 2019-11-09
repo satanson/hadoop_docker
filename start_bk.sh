@@ -12,7 +12,7 @@ for node in $(eval "echo bk{0..$((${bkNum}-1))}");do
 done
 
 set -e -o pipefail
-dockerFlags="--rm -w /home/hdfs -u hdfs --privileged --net static_net -v ${PWD}/hosts:/etc/hosts -v ${bkRoot}:/home/hdfs/bk -v ${PWD}/bk_conf:/home/hdfs/bk/conf"
+dockerFlags="--rm -w /home/hdfs -u hdfs --privileged --net static_net0 -v ${PWD}/hosts:/etc/hosts -v ${bkRoot}:/home/hdfs/bk -v ${PWD}/bk_conf:/home/hdfs/bk/conf"
 
 bootstrap(){
     # create zkLedgersRootPath i.e /bk/ledgers

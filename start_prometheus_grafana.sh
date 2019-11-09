@@ -11,7 +11,7 @@ for c in prometheus grafana;do
 	docker rm $c >/dev/null 2>&1
 done
 
-net=static_net
+net=static_net0
 prometheus_ip=192.168.110.211
 grafana_ip=192.168.110.212
 

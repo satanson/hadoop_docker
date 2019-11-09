@@ -7,7 +7,7 @@ dataNodeCount=6
 cd  ${basedir}
 source ${basedir}/functions.sh
 hadoopRoot=$(readlink -f ${basedir}/../hadoop_all/hadoop)
-dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net -v ${PWD}/hosts:/etc/hosts 
+dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net0 -v ${PWD}/hosts:/etc/hosts 
 	-v ${hadoopRoot}:/home/hdfs/hadoop
   "
 startNode(){

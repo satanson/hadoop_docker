@@ -11,7 +11,7 @@ cd  ${basedir}
 hadoopRoot=$(readlink -f ${basedir}/../hadoop_all/hadoop)
 hbaseRoot=$(readlink -f ${basedir}/../hadoop_all/hbase)
 
-dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net 
+dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net0 
   --security-opt seccomp:unconfined
   --cap-add ALL
   --ipc private
