@@ -95,7 +95,7 @@ for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))}");do
   startNameNode $name
 done
 
-sleep 5
+sleep 10
 docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -transitionToActive gra2 --forceactive
 docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs dfsadmin -safemode leave
 sleep 5

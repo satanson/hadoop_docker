@@ -82,6 +82,7 @@
   </property>
 
   <!-- qjournal -->
+  <!--
   <property>
     <name>dfs.journalnode.edits.dir</name>
     <value>/home/hdfs/journal_dir</value>
@@ -98,9 +99,9 @@
     <name>dfs.journalnode.http-address</name>
     <value>0.0.0.0:8480</value>
   </property>
+  -->
 
   <!-- bookkeeper journal -->
-  <!--
   <property>
     <name>dfs.namenode.shared.edits.dir</name>
     <value>bookkeeper://zk0:2181;zk1:2181;zk2:2181/bk_nn_grakra</value>
@@ -138,7 +139,6 @@
     <name>dfs.namenode.bookkeeperjournal.ack-quorum-size</name>
     <value>2</value>
   </property>
-  -->
 
   <property>
     <name>dfs.replication</name>
