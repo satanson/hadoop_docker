@@ -13,8 +13,8 @@ my @nodes=((map{"datanode$_"} 0..$dataN-1), (map{"namenode$_"} 0..$nameN-1));
 #print Dumper(\@nodes);
 
 for my $n (@nodes) {
-	my @dirs=map{$n."_$_"} qw/ssh log dat/;
-	my ($ssh, $log, $dat)=@dirs;
+	my @dirs=map{$n."_$_"} qw/ssh log data/;
+	my ($ssh, $log, $data)=@dirs;
 
 	print qq(mkdir -p @dirs);
 	print "\n";

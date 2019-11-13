@@ -25,7 +25,7 @@ startNode(){
   --name $name
   --hostname $name
   --ip $ip 
-  -v ${PWD}/${name}_dat:${targetDataDir}
+  -v ${PWD}/${name}_data:${targetDataDir}
   -v ${PWD}/${name}_logs:/home/hdfs/hadoop/logs
   -v ${confDir}:/home/hdfs/hadoop/etc/hadoop
   -v ${PWD}/start_hdfs_node.sh:/home/hdfs/hadoop/start_hdfs_node.sh
@@ -34,14 +34,14 @@ startNode(){
 }
 
 format(){
-  rm -fr ${PWD}/namenode*_dat/*
+  rm -fr ${PWD}/namenode*_data/*
 	flags=' \
   ${dockerFlags} \
   -it \
   --name $name \
   --hostname $name \
   --ip $ip \
-  -v ${PWD}/${name}_dat:/home/hdfs/hadoop_name_dir \
+  -v ${PWD}/${name}_data:/home/hdfs/hadoop_name_dir \
   -v ${PWD}/${name}_logs:/home/hdfs/hadoop/logs \
   -v ${PWD}/${name}_conf:/home/hdfs/hadoop/etc/hadoop \
   '
@@ -55,7 +55,7 @@ format(){
   
 	docker run ${namenode0_flags} hadoop_debian:8.8 bash -c "rm -fr /home/hdfs/hadoop/logs/* && rm -fr /home/hdfs/hadoop_name_dir/* && /home/hdfs/hadoop/bin/hdfs namenode -format -force -nonInteractive"
   docker run ${namenode0_flags} hadoop_debian:8.8 /home/hdfs/hadoop/bin/hdfs namenode -initializeSharedEdits -force -nonInteractive
-	docker run ${namenode1_flags} -v ${PWD}/namenode0_dat:/home/hdfs/hadoop_name_dir_active hadoop_debian:8.8 cp -r /home/hdfs/hadoop_name_dir_active/current /home/hdfs/hadoop_name_dir/
+	docker run ${namenode1_flags} -v ${PWD}/namenode0_data:/home/hdfs/hadoop_name_dir_active hadoop_debian:8.8 cp -r /home/hdfs/hadoop_name_dir_active/current /home/hdfs/hadoop_name_dir/
 }
 
 startNameNode(){
@@ -113,12 +113,12 @@ restart_node(){
 }
 
 bootstrap(){
-  rm -fr ${basedir}/namenode*_dat/*
-  rm -fr ${basedir}/datanode*_dat/*
+  rm -fr ${basedir}/namenode*_data/*
+  rm -fr ${basedir}/datanode*_data/*
   for name in $(eval "echo datanode{0..$((${dataNodeCount}-1))}");do
-    dat=${basedir:?"undefined"}/${name:?"undefined"}_dat
-    rm -fr ${dat:?"undefined"}/current
-    mkdir -p ${dat}
+    data=${basedir:?"undefined"}/${name:?"undefined"}_data
+    rm -fr ${data:?"undefined"}/current
+    mkdir -p ${data}
   done
   rm -fr ${basedir}/namenode*_logs/*
   rm -fr ${basedir}/datanode*_logs/*

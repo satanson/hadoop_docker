@@ -77,9 +77,9 @@ if [ -n "$bootstrap" ];then
   rm -fr ${basedir}/hregionserver*_tmp/*
   rm -fr ${basedir}/hthriftserver*_tmp/*
   for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))} hthriftserver{0..$((${hthriftserverCount}-1))}");do
-    dat=${basedir:?"undefined"}/${name:?"undefined"}_tmp
+    data=${basedir:?"undefined"}/${name:?"undefined"}_tmp
     logs=${basedir:?"undefined"}/${name:?"undefined"}_logs
-    mkdir -p ${dat}
+    mkdir -p ${data}
     mkdir -p ${logs}
   done
 fi
