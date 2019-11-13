@@ -7,8 +7,8 @@ yarnNmCount=6
 
 cd  ${basedir}
 
-hadoopRoot=${basedir}/../hadoop_all/hadoop
-sparkRoot=${basedir}/../spark-2.4.3-bin-hadoop2.6
+hadoopRoot=$(cd $(readlink -f ${basedir}/../hadoop_all/hadoop);pwd)
+sparkRoot=$(cd $(readlink -f ${basedir}/../hadoop_all/spark);pwd)
 
 dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_net0 -v ${PWD}/hosts:/etc/hosts 
 	-v ${hadoopRoot}:/home/hdfs/hadoop
@@ -32,8 +32,8 @@ startNode(){
   --name $name
   --hostname $name
   --ip $ip 
-  -v ${PWD}/${name}_dat:${targetDataDir}
-  -v ${PWD}/${name}_log:/home/hdfs/hadoop/logs
+  -v ${PWD}/${name}_data:${targetDataDir}
+  -v ${PWD}/${name}_logs:/home/hdfs/hadoop/logs
   -v ${confDir}:/home/hdfs/hadoop/etc/hadoop
   -v ${PWD}/start_yarn_node.sh:/home/hdfs/hadoop/start_yarn_node.sh
   "
@@ -62,10 +62,10 @@ done
 format(){
   docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server localhost:2181 rmr /yarn-leader-election
   docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server localhost:2181 rmr /yarnrm_rmstore
-  rm -fr ${PWD}/yarnrm*_dat/*
-  rm -fr ${PWD}/yarnnm*_dat/*
-  rm -fr ${PWD}/yarnrm*_log/*
-  rm -fr ${PWD}/yarnnm*_log/*
+  rm -fr ${PWD}/yarnrm*_data/*
+  rm -fr ${PWD}/yarnnm*_data/*
+  rm -fr ${PWD}/yarnrm*_logs/*
+  rm -fr ${PWD}/yarnnm*_logs/*
 }
 
 if [ -n "$bootstrap" ];then

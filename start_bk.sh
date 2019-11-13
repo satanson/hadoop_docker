@@ -21,7 +21,7 @@ bootstrap(){
     for dir in $(perl -e "@comp=split m|/|, qq|${zkLedgersRootPath}|; print join qq|\n|,map{join qq|/|, @comp[0..\$_]} 1..\$#comp");do
       docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server zk0:2181 create ${dir} ""
     done
-    rm -fr ${basedir}/bk*_dat/*
+    rm -fr ${basedir}/bk*_data/*
 }
 
 if [ -n "${bootstrap}" ];then
@@ -30,11 +30,11 @@ fi
 
 for node in $(eval "echo bk{0..$((${bkNum}-1))}") ;do
 	ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$node\b/" hosts)
-  mkdir -p ${PWD}/${node}_dat
+  mkdir -p ${PWD}/${node}_data
   mkdir -p ${PWD}/${node}_logs
   rm -fr ${PWD:?"undefined 'PWD'"}/${node:?"undefined 'node'"}_logs/*log*
   flags="
-  -v ${PWD}/${node}_dat:/home/hdfs/bk_dat
+  -v ${PWD}/${node}_data:/home/hdfs/bk_data
   -v ${PWD}/${node}_logs:/home/hdfs/bk_logs
   --name $node
   --hostname $node
@@ -43,7 +43,7 @@ for node in $(eval "echo bk{0..$((${bkNum}-1))}") ;do
 
   if [ "x${node}x" = "xbk0x" ];then
     set +e +o pipefail
-    inited=/home/hdfs/bk_dat/metaformat.done
+    inited=/home/hdfs/bk_data/metaformat.done
     docker run -ti ${dockerFlags} ${flags} hadoop_debian:8.8 \
       bash -c "[ -f ${inited} ] || (cd /home/hdfs/bk && /home/hdfs/bk/bin/bookkeeper shell metaformat -force -nonInteractive && touch ${inited})"
     sleep 2

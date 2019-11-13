@@ -13,9 +13,9 @@ done
 
 format(){
   for node in $(eval "echo qjournal{0..$((${qjournalNum}-1))}") ;do
-    [ -d ${PWD}/${node}_data ] && rm -fr ${PWD}/${node}_dat
-    [ -d ${PWD}/${node}_log ] && rm -fr ${PWD}/${node}_logs
-    mkdir -p ${PWD}/${node}_dat
+    [ -d ${PWD}/${node}_data ] && rm -fr ${PWD}/${node}_data
+    [ -d ${PWD}/${node}_logs ] && rm -fr ${PWD}/${node}_logs
+    mkdir -p ${PWD}/${node}_data
     mkdir -p ${PWD}/${node}_logs
   done
 }
@@ -32,7 +32,7 @@ dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_n
 for node in $(eval "echo qjournal{0..$((${qjournalNum}-1))}") ;do
 	ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$node\b/" hosts)
   name=${node}
-  mkdir -p ${PWD}/${node}_dat
+  mkdir -p ${PWD}/${node}_data
   mkdir -p ${PWD}/${node}_logs
 
 	flags="
@@ -41,10 +41,11 @@ for node in $(eval "echo qjournal{0..$((${qjournalNum}-1))}") ;do
   --name $name
   --hostname $name
   --ip $ip 
-  -v ${PWD}/${name}_dat:/home/hdfs/journal_dir
+  -v ${PWD}/${name}_data:/home/hdfs/journal_dir
   -v ${PWD}/${name}_logs:/home/hdfs/hadoop/logs
   -v ${basedir}/namenode0_conf:/home/hdfs/hadoop/etc/hadoop
   -v ${PWD}/start_hdfs_node.sh:/home/hdfs/hadoop/start_hdfs_node.sh
   "
-	docker run $flags hadoop_debian:8.8 /home/hdfs/hadoop/start_hdfs_node.sh journalnode
+	# docker run $flags hadoop_debian:8.8 /home/hdfs/hadoop/start_hdfs_node.sh journalnode
+	docker run $flags hadoop_debian:8.8 bash -c "/home/hdfs/hadoop/sbin/hadoop-daemon.sh start journalnode && sleep 1000000000"
 done
