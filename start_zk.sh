@@ -21,6 +21,8 @@ done
 cd ${basedir}
 
 dockerFlags="-tid --rm -w /home/hdfs -u hdfs --privileged --net static_net0
+  -v /home/grakra/bin/greys:/home/hdfs/greys
+  -v ${HOME}/.greys:/home/hdfs/.greys
   -v ${PWD}/hosts:/etc/hosts -v ${zkRoot}:/home/hdfs/zk -v ${PWD}/zk_conf:/home/hdfs/zk/conf"
 
 for node in $(eval "echo zk{0..$((${zkNum}-1))}") ;do
@@ -35,6 +37,6 @@ for node in $(eval "echo zk{0..$((${zkNum}-1))}") ;do
   myid=${node##zk}
   rm -fr ${PWD}/${node}_logs/*
   mkdir -p ${PWD}/${node}_logs
-  docker run ${dockerFlags} ${flags} hadoop_debian:8.8 \
+  docker run ${dockerFlags} ${flags} -e JVMFLAGS="-Djava.io.tmpdir=/tmp  -XX:+UseConcMarkSweepGC -XX:+StartAttachListener" hadoop_debian:8.8 \
     bash -c "echo ${myid} > /home/hdfs/zk_data/myid && cd /home/hdfs/zk && bin/zkServer.sh start-foreground"
 done

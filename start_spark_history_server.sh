@@ -3,6 +3,7 @@ set -e -o pipefail
 
 ./hdfs dfs -mkdir -p /tmp/spark-events
 ./hdfs dfs -mkdir -p /shared/spark-logs
+./hdfs dfs -mkdir -p hdfs://grakrabackend/spark_history
 
 for node in yarnrm{0..1} yarnnm{0..5};do 
   docker exec -it ${node} /home/hdfs/spark/sbin/stop-history-server.sh

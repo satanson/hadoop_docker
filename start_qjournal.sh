@@ -20,7 +20,7 @@ format(){
   done
 }
 
-if [ -n ${bootstrap} ];then
+if [ -n "${bootstrap}" ];then
   format
 fi
 

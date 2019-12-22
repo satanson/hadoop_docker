@@ -197,7 +197,7 @@ failover(){
   docker exec -it ${name} /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -getServiceState ${nn0}
   docker exec -it ${name} /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -getServiceState ${nn1}
   echo "Namenode failover from ${nn1} to ${nn0}"
-  docker exec -it ${name} /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -failover ${nn1} ${nn0}
+  docker exec -it ${name} /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -failover ${nn1} ${nn0} --forceactive --forcefence
 }
 
 start_all(){
