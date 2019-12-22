@@ -23,6 +23,8 @@ cd ${basedir}
 dockerFlags="-tid --rm -w /home/hdfs -u hdfs --privileged --net static_net0
   -v /home/grakra/bin/greys:/home/hdfs/greys
   -v ${HOME}/.greys:/home/hdfs/.greys
+  -e ZOO_LOG_DIR=/home/hdfs/zk/logs
+  -e ZOO_LOG4J_PROP=INFO,CONSOLE,ROLLINGFILE
   -v ${PWD}/hosts:/etc/hosts -v ${zkRoot}:/home/hdfs/zk -v ${PWD}/zk_conf:/home/hdfs/zk/conf"
 
 for node in $(eval "echo zk{0..$((${zkNum}-1))}") ;do
