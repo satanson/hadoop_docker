@@ -1,83 +1,83 @@
-192.168.172.2	datanode0
-192.168.172.3	datanode1
-192.168.172.4	datanode2
-192.168.172.5	datanode3
-192.168.172.6	datanode4
-192.168.172.7	datanode5
+192.168.128.2	datanode0
+192.168.128.3	datanode1
+192.168.128.4	datanode2
+192.168.128.5	datanode3
+192.168.128.6	datanode4
+192.168.128.7	datanode5
 
-192.168.172.8	namenode0
-192.168.172.9	namenode1
+192.168.128.8	namenode0
+192.168.128.9	namenode1
 
 127.0.0.1 localhost
 
-192.168.172.40 zk0
-192.168.172.41 zk1
-192.168.172.42 zk2
-192.168.172.50 bk0 qjournal0
-192.168.172.51 bk1 qjournal1
-192.168.172.52 bk2 qjournal2
-192.168.172.53 bk3
-192.168.172.54 bk4
+192.168.128.40 zk0
+192.168.128.41 zk1
+192.168.128.42 zk2
+192.168.128.50 bk0 qjournal0
+192.168.128.51 bk1 qjournal1
+192.168.128.52 bk2 qjournal2
+192.168.128.53 bk3
+192.168.128.54 bk4
 
-192.168.172.60 yarnrm0
-192.168.172.61 yarnrm1
+192.168.128.60 yarnrm0
+192.168.128.61 yarnrm1
 
-192.168.172.72 yarnnm0
-192.168.172.73 yarnnm1
-192.168.172.74 yarnnm2
-192.168.172.75 yarnnm3
-192.168.172.76 yarnnm4
-192.168.172.77 yarnnm5
+192.168.128.72 yarnnm0
+192.168.128.73 yarnnm1
+192.168.128.74 yarnnm2
+192.168.128.75 yarnnm3
+192.168.128.76 yarnnm4
+192.168.128.77 yarnnm5
 
-192.168.172.80 hmaster0
-192.168.172.81 hmaster1
-192.168.172.90 hregionserver0
-192.168.172.91 hregionserver1
-192.168.172.92 hregionserver2
-192.168.172.93 hregionserver3
-192.168.172.94 hregionserver4
-192.168.172.95 hregionserver5
-192.168.172.100 hthriftserver0
-192.168.172.101 hthriftserver1
+192.168.128.80 hmaster0
+192.168.128.81 hmaster1
+192.168.128.90 hregionserver0
+192.168.128.91 hregionserver1
+192.168.128.92 hregionserver2
+192.168.128.93 hregionserver3
+192.168.128.94 hregionserver4
+192.168.128.95 hregionserver5
+192.168.128.100 hthriftserver0
+192.168.128.101 hthriftserver1
 
-192.168.172.102	ya_datanode0
-192.168.172.103	ya_datanode1
-192.168.172.104	ya_datanode2
-192.168.172.105	ya_datanode3
-192.168.172.106	ya_datanode4
-192.168.172.107	ya_datanode5
+192.168.128.102	ya_datanode0
+192.168.128.103	ya_datanode1
+192.168.128.104	ya_datanode2
+192.168.128.105	ya_datanode3
+192.168.128.106	ya_datanode4
+192.168.128.107	ya_datanode5
 
-192.168.172.108	ya_namenode0
-192.168.172.109	ya_namenode1
+192.168.128.108	ya_namenode0
+192.168.128.109	ya_namenode1
 
 
-192.168.172.140 ya_zk0
-192.168.172.141 ya_zk1
-192.168.172.142 ya_zk2
-192.168.172.150 ya_bk0
-192.168.172.151 ya_bk1
-192.168.172.152 ya_bk2
+192.168.128.140 ya_zk0
+192.168.128.141 ya_zk1
+192.168.128.142 ya_zk2
+192.168.128.150 ya_bk0
+192.168.128.151 ya_bk1
+192.168.128.152 ya_bk2
 
-192.168.172.160 ya_yarnrm0
-192.168.172.161 ya_yarnrm1
+192.168.128.160 ya_yarnrm0
+192.168.128.161 ya_yarnrm1
 
-192.168.172.172 ya_yarnnm0
-192.168.172.173 ya_yarnnm1
-192.168.172.174 ya_yarnnm2
-192.168.172.175 ya_yarnnm3
-192.168.172.176 ya_yarnnm4
-192.168.172.177 ya_yarnnm5
+192.168.128.172 ya_yarnnm0
+192.168.128.173 ya_yarnnm1
+192.168.128.174 ya_yarnnm2
+192.168.128.175 ya_yarnnm3
+192.168.128.176 ya_yarnnm4
+192.168.128.177 ya_yarnnm5
 
-192.168.172.180 ya_hmaster0
-192.168.172.181 ya_hmaster1
-192.168.172.190 ya_hregionserver0
-192.168.172.191 ya_hregionserver1
-192.168.172.192 ya_hregionserver2
-192.168.172.193 ya_hregionserver3
-192.168.172.194 ya_hregionserver4
-192.168.172.195 ya_hregionserver5
-192.168.172.200 ya_hthriftserver0
-192.168.172.201 ya_hthriftserver1
+192.168.128.180 ya_hmaster0
+192.168.128.181 ya_hmaster1
+192.168.128.190 ya_hregionserver0
+192.168.128.191 ya_hregionserver1
+192.168.128.192 ya_hregionserver2
+192.168.128.193 ya_hregionserver3
+192.168.128.194 ya_hregionserver4
+192.168.128.195 ya_hregionserver5
+192.168.128.200 ya_hthriftserver0
+192.168.128.201 ya_hthriftserver1
 
-192.168.172.211 prometheus
-192.168.172.212 grafana
+192.168.128.211 prometheus
+192.168.128.212 grafana
