@@ -31,7 +31,7 @@
   </property>
   <property>
     <name>yarn.resourcemanager.zk-state-store.parent-path</name>
-    <value>/yarnrm_rmstore</value>
+    <value>/yarn_rm_rmstore</value>
   </property>
   <property>
     <name>yarn.resourcemanager.store.class</name>
@@ -40,15 +40,12 @@
 
   <property>
     <name>yarn.resourcemanager.cluster-id</name>
-    <value>yarnrm</value>
+    <value>yarn_rm</value>
   </property>
+
   <property>
     <name>yarn.resourcemanager.ha.rm-ids</name>
     <value>rm0,rm1</value>
-  </property>
-  <property>
-    <name>yarn.resourcemanager.ha.id</name>
-    <value>rm0</value>
   </property>
 
   <property>
@@ -112,11 +109,11 @@
 
   <property>
     <name>yarn.resourcemanager.nodes.include-path</name>
-    <value>/home/hdfs/hadoop/etc/hadoop/yarnnm.include</value>
+    <value>yarn_nm.include</value>
   </property>
   <property>
     <name>yarn.resourcemanager.nodes.exclude-path</name>
-    <value>/home/hdfs/hadoop/etc/hadoop/yarnnm.exclude</value>
+    <value>yarn_nm.exclude</value>
   </property>
   
   <property>
@@ -152,11 +149,11 @@
 
   <property>
     <name>yarn.nodemanager.local-dirs</name>
-    <value>/home/hdfs/yarnnm_data/nm-local-dir</value>
+    <value>/tmp/nm-local-dir</value>
   </property>
   <property>
     <name>yarn.nodemanager.log-dirs</name>
-    <value>/home/hdfs/yarnnm_data/nm-log-dir</value>
+    <value>/root/nodemanager_logs</value>
   </property>
 
   <property>

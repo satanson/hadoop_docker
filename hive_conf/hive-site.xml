@@ -564,7 +564,7 @@
   -->
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:mysql://192.168.110.1:3306/hive?useUnicode=true&amp;characterEncoding=UTF-8</value>
+    <value>jdbc:mysql://mysqld0:3306/hive?useUnicode=true&amp;characterEncoding=UTF-8</value>
   </property>
   <property>
     <name>javax.jdo.option.ConnectionDriverName</name>
@@ -4639,7 +4639,7 @@
   </property>
   <property>
     <name>hive.execution.engine</name>
-    <value>mr</value>
+    <value>spark</value>
     <description>
       Expects one of [mr, tez, spark].
       Chooses execution engine. Options are: mr (Map reduce, default), tez, spark. While MR
@@ -5975,5 +5975,9 @@
       This is a performance optimization that forces the final FileSinkOperator to write to the blobstore.
       See HIVE-15121 for details.
     </description>
+  </property>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
   </property>
 </configuration>

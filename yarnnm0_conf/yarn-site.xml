@@ -145,10 +145,6 @@
     <name>yarn.scheduler.minimum-allocation-vcores</name>
     <value>1</value>
   </property>
-  <property>
-    <name>yarn.scheduler.minimum-allocation-vcores</name>
-    <value>4</value>
-  </property>
 
   <property>
     <name>yarn.nodemanager.local-dirs</name>

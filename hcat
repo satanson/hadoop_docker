@@ -11,3 +11,4 @@ export HIVE_HOME=$(cd ${basedir}/../hadoop_all/hive;pwd)
 export HIVE_CONF_DIR=${basedir}/hive_conf
 export HCAT_LOG_DIR=${basedir}/hcatlog_log
 ${HIVE_HOME}/hcatalog/bin/hcat --config ${HIVE_CONF_DIR} -e 'show tables;'
+#${HIVE_HOME}/hcatalog/bin/hcat --config ${HIVE_CONF_DIR} 

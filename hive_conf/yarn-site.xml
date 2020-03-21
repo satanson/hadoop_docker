@@ -31,7 +31,7 @@
   </property>
   <property>
     <name>yarn.resourcemanager.zk-state-store.parent-path</name>
-    <value>/yarn_rm_rmstore</value>
+    <value>/yarnrm_rmstore</value>
   </property>
   <property>
     <name>yarn.resourcemanager.store.class</name>
@@ -40,66 +40,69 @@
 
   <property>
     <name>yarn.resourcemanager.cluster-id</name>
-    <value>yarn_rm</value>
+    <value>yarnrm</value>
   </property>
-
   <property>
     <name>yarn.resourcemanager.ha.rm-ids</name>
     <value>rm0,rm1</value>
   </property>
+  <property>
+    <name>yarn.resourcemanager.ha.id</name>
+    <value>rm0</value>
+  </property>
 
   <property>
     <name>yarn.resourcemanager.hostname.rm0</name>
-    <value>yarn_rm0</value>
+    <value>yarnrm0</value>
   </property>
   <property>
     <name>yarn.resourcemanager.hostname.rm1</name>
-    <value>yarn_rm1</value>
+    <value>yarnrm1</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.address.rm0</name>
-    <value>yarn_rm0:8032</value>
+    <value>yarnrm0:8032</value>
   </property>
   <property>
     <name>yarn.resourcemanager.address.rm1</name>
-    <value>yarn_rm1:8032</value>
+    <value>yarnrm1:8032</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.scheduler.address.rm0</name>
-    <value>yarn_rm0:8030</value>
+    <value>yarnrm0:8030</value>
   </property>
   <property>
     <name>yarn.resourcemanager.scheduler.address.rm1</name>
-    <value>yarn_rm1:8030</value>
+    <value>yarnrm1:8030</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.resource-tracker.address.rm0</name>
-    <value>yarn_rm0:8031</value>
+    <value>yarnrm0:8031</value>
   </property>
   <property>
     <name>yarn.resourcemanager.resource-tracker.address.rm1</name>
-    <value>yarn_rm1:8031</value>
+    <value>yarnrm1:8031</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.admin.address.rm0</name>
-    <value>yarn_rm0:8033</value>
+    <value>yarnrm0:8033</value>
   </property>
   <property>
     <name>yarn.resourcemanager.admin.address.rm1</name>
-    <value>yarn_rm1:8033</value>
+    <value>yarnrm1:8033</value>
   </property>
 
   <property>
     <name>yarn.resourcemanager.webapp.address.rm0</name>
-    <value>yarn_rm0:8088</value>
+    <value>yarnrm0:8088</value>
   </property>
   <property>
     <name>yarn.resourcemanager.webapp.address.rm1</name>
-    <value>yarn_rm1:8088</value>
+    <value>yarnrm1:8088</value>
   </property>
 
   <property>
@@ -109,11 +112,11 @@
 
   <property>
     <name>yarn.resourcemanager.nodes.include-path</name>
-    <value>yarn_nm.include</value>
+    <value>/home/hdfs/hadoop/etc/hadoop/yarnnm.include</value>
   </property>
   <property>
     <name>yarn.resourcemanager.nodes.exclude-path</name>
-    <value>yarn_nm.exclude</value>
+    <value>/home/hdfs/hadoop/etc/hadoop/yarnnm.exclude</value>
   </property>
   
   <property>
@@ -131,7 +134,7 @@
   </property>
   <property>
     <name>yarn.nodemanager.resource.memory-mb</name>
-    <value>512</value>
+    <value>2048</value>
   </property>
 
   <property>
@@ -142,18 +145,14 @@
     <name>yarn.scheduler.minimum-allocation-vcores</name>
     <value>1</value>
   </property>
-  <property>
-    <name>yarn.scheduler.minimum-allocation-vcores</name>
-    <value>4</value>
-  </property>
 
   <property>
     <name>yarn.nodemanager.local-dirs</name>
-    <value>/tmp/nm-local-dir</value>
+    <value>/home/hdfs/yarnnm_data/nm-local-dir</value>
   </property>
   <property>
     <name>yarn.nodemanager.log-dirs</name>
-    <value>/root/nodemanager_logs</value>
+    <value>/home/hdfs/yarnnm_data/nm-log-dir</value>
   </property>
 
   <property>

@@ -19,6 +19,12 @@
 
 # This file is sourced when running various Spark programs.
 # Copy it as spark-env.sh and edit that to configure Spark for your site.
+SPARK_LOCAL_IP=192.168.128.1
+HADOOP_HOME=/home/grakra/workspace/hadoop_all/hadoop
+HADOOP_CONF_DIR=/home/grakra/workspace/hadoop_docker/hadoop_client_conf
+YARN_CONF_DIR=/home/grakra/workspace/hadoop_docker/hadoop_client_conf
+HBASE_HOME=/home/grakra/workspace/hadoop_all/hbase
+HBASE_CONF_DIR=/home/grakra/workspace/hadoop_docker/hbase_client_conf
 
 # Options read when launching programs locally with
 # ./bin/run-example or ./bin/spark-submit
@@ -35,10 +41,10 @@
 # Options read in YARN client/cluster mode
 # - SPARK_CONF_DIR, Alternate conf dir. (Default: ${SPARK_HOME}/conf)
 # - HADOOP_CONF_DIR, to point Spark towards Hadoop configuration files
-HADOOP_HOME=/home/hdfs/hadoop
-HADOOP_CONF_DIR=/home/hdfs/hadoop/etc/hadoop
+# HADOOP_HOME=/home/hdfs/hadoop
+# HADOOP_CONF_DIR=/home/hdfs/hadoop/etc/hadoop
 # - YARN_CONF_DIR, to point Spark towards YARN configuration files when you use YARN
-YARN_CONF_DIR=/home/hdfs/hadoop/etc/hadoop
+# YARN_CONF_DIR=/home/hdfs/hadoop/etc/hadoop
 # - SPARK_EXECUTOR_CORES, Number of cores for the executors (Default: 1).
 # - SPARK_EXECUTOR_MEMORY, Memory per Executor (e.g. 1000M, 2G) (Default: 1G)
 # - SPARK_DRIVER_MEMORY, Memory for Driver (e.g. 1000M, 2G) (Default: 1G)
