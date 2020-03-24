@@ -3,7 +3,7 @@
 basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
 bootstrap=$1;shift
 yarnRmCount=2
-yarnNmCount=6
+yarnNmCount=8
 
 cd  ${basedir}
 
@@ -15,6 +15,8 @@ dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_n
   -v ${sparkRoot}:/home/hdfs/spark
   -v ${basedir}/spark_conf:/home/hdfs/spark/conf
   -v ${basedir}/spark_logs:/home/hdfs/spark/logs
+  -v /home/grakra/bin/greys:/home/hdfs/greys
+  -v ${HOME}/.greys:/home/hdfs/.greys
   "
 
 startNode(){

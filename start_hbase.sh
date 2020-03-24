@@ -18,7 +18,7 @@ dockerFlags="--rm -w /home/hdfs -u hdfs -e USER=hdfs --privileged --net static_n
   -v ${PWD}/hosts:/etc/hosts 
   -v ${JAVA_HOME}:/opt/jdk
 	-v ${hbaseRoot}:/home/hdfs/hbase
-  -v ${BTRACE_HOME}:/home/hdfs/btrace
+  -v /home/grakra/bin/greys:/home/hdfs/greys
   -v ${HOME}/.greys:/home/hdfs/.greys
   -v ${hadoopRoot}:/home/hdfs/hadoop
   -v /usr/lib:/usr/lib

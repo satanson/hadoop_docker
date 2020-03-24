@@ -134,7 +134,7 @@
   </property>
   <property>
     <name>yarn.nodemanager.resource.memory-mb</name>
-    <value>2048</value>
+    <value>4096</value>
   </property>
 
   <property>
