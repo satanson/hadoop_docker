@@ -90,14 +90,22 @@ if [ -n "$bootstrap" ];then
   rm -fr ${basedir}/datanode*_logs/*
   format
 fi
+while : ; do
+  for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))}");do
+    startNameNode $name
+  done
 
-for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))}");do
-  startNameNode $name
+  sleep 10
+  if ! docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -transitionToActive gra2 --forceactive;then
+    continue
+  fi
+
+  if ! docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs dfsadmin -safemode leave;then
+    continue
+  fi
+  break
 done
 
-sleep 10
-docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -transitionToActive gra2 --forceactive
-docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs dfsadmin -safemode leave
 sleep 5
 
 for name in $(eval "echo datanode{0..$((${dataNodeCount}-1))}");do
