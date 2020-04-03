@@ -1,0 +1,10 @@
+#!/bin/bash
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+cd ${basedir}
+
+export HADOOP_CONF_DIR=${basedir}/hadoop_conf_client
+export YARN_CONF_DIR=${basedir}/hadoop_conf_client
+export SPARK_CONF_DIR=${basedir}/spark_conf_client
+export TERM=xterm-color
+
+${basedir}/../hadoop_all/spark/bin/spark-submit $*

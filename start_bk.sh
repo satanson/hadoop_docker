@@ -5,8 +5,14 @@ bootstrap=$1;shift
 cd ${basedir}
 bkRoot=$(readlink -f ${basedir}/../hadoop_all/bookkeeper-server)
 bkNum=5
+bkAutoRecoveryNum=1
 
 for node in $(eval "echo bk{0..$((${bkNum}-1))}");do
+	docker kill $node
+	docker rm $node
+done
+
+for node in $(eval "echo bk_autorecovery{0..$((${bkAutoRecoveryNum}-1))}");do
 	docker kill $node
 	docker rm $node
 done
@@ -55,4 +61,20 @@ for node in $(eval "echo bk{0..$((${bkNum}-1))}") ;do
 
   docker run -tid ${dockerFlags} ${flags} hadoop_debian:8.8 \
     bash -c "cd /home/hdfs/bk && bin/bookkeeper bookie"
+done
+
+for node in $(eval "echo bk_autorecovery{0..$((${bkAutoRecoveryNum}-1))}") ;do
+	ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$node\b/" hosts)
+  mkdir -p ${PWD}/${node}_data
+  mkdir -p ${PWD}/${node}_logs
+  rm -fr ${PWD:?"undefined 'PWD'"}/${node:?"undefined 'node'"}_logs/*log*
+  flags="
+  -v ${PWD}/${node}_data:/home/hdfs/bk_data
+  -v ${PWD}/${node}_logs:/home/hdfs/bk_logs
+  --name $node
+  --hostname $node
+  --ip $ip
+  "
+  docker run -tid ${dockerFlags} ${flags} hadoop_debian:8.8 \
+    bash -c "cd /home/hdfs/bk && bin/bookkeeper autorecovery"
 done

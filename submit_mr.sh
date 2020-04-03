@@ -29,6 +29,7 @@ mainJar=${1:?"undefined jar"};shift
 mainClass=${1:?"undefined class"};shift
 
 CLASSPATH=${CLASSPATH}:${mainJar}
+CLASSPATH=${PWD}:${CLASSPATH}
 
 java -cp ${CLASSPATH} \
   ${mainClass} $*
