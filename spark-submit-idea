@@ -1,0 +1,35 @@
+#!/bin/bash
+set -e -o pipefail
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+cwd=$(pwd)
+test -f pom.xml
+cd ${basedir}
+
+pushd ${cwd}
+version=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+groupId=$(mvn help:evaluate -Dexpression=project.groupId -q -DforceStdout)
+artifactId=$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)
+
+mainJar=${cwd}/target/${artifactId}-${version}.jar
+src_newer_than_jar="find ./src -newer ${mainJar} |wc -l" 
+
+echo "ensure target jar '${mainJar}' exist and fresh"
+if [ -f ${mainJar} ];then
+  if [  $(eval ${src_newer_than_jar}) -gt 0 ]; then
+    echo "target jar '${mainJar}' is stale, so re-compile"
+    mvn clean package -DskipTests=true 
+  else
+    echo "target jar '${mainJar}' exist and fresh, so skip re-compilation"
+  fi
+else
+  echo "target jar '${mainJar}' not exist, so re-compile"
+  mvn clean package -DskipTests=true 
+fi
+
+test -f ${mainJar}
+
+popd
+
+mainClass=${1:?"missing 'mainClass'"};shift
+echo ${basedir}/spark-submit -deploy-mode cluster --master yarn --class ${mainClass} ${mainJar}
+${basedir}/spark-submit --deploy-mode cluster --master yarn --class ${mainClass} ${mainJar}
