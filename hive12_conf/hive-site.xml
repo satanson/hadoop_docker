@@ -24,6 +24,16 @@
     <value/>
     <description/>
   </property>
+
+  <property>
+    <name>system:java.io.tmpdir</name>
+    <value>/tmp/hive/java</value>
+  </property>
+  <property>
+    <name>system:user.name</name>
+    <value>${user.name}</value>
+  </property>
+
   <property>
     <name>hive.exec.plan</name>
     <value/>
@@ -544,7 +554,7 @@
   <!-- megastore backend begin -->
   <property>
     <name>javax.jdo.option.ConnectionURL</name>
-    <value>jdbc:mysql://mysqld1:3306/hive?useUnicode=true&amp;characterEncoding=UTF-8</value>
+    <value>jdbc:mysql://mysqld0:3306/hive12?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</value>
     <description>
       JDBC connect string for a JDBC metastore.
       To use SSL to encrypt/authenticate the connection, provide database-specific SSL flag in the connection URL.
