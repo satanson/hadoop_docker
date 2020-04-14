@@ -1,0 +1,12 @@
+#!/bin/bash
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+cd ${basedir}
+export HADOOP_HOME=$(cd ${basedir}/../hadoop_all/hadoop;pwd)
+export HADOOP_CONF_DIR=${basedir}/hadoop_conf_client
+export YARN_HOME=$(cd ${basedir}/../hadoop_all/hadoop;pwd)
+export YARN_CONF_DIR=${basedir}/hadoop_conf_client
+export HBASE_HOME=$(cd ${basedir}/../hadoop_all/hbase;pwd)
+export HBASE_CONF_DIR=${basedir}/hbase_client_conf
+export HIVE_HOME=$(cd ${basedir}/../hadoop_all/hive12;pwd)
+export HIVE_CONF_DIR=${basedir}/hive12_conf
+${HIVE_HOME}/bin/beeline -u jdbc:hive2://localhost:10000
