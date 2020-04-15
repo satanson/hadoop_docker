@@ -19,7 +19,7 @@
 
 # This file is sourced when running various Spark programs.
 # Copy it as spark-env.sh and edit that to configure Spark for your site.
-# SPARK_LOCAL_IP=192.168.128.1
+#SPARK_LOCAL_IP=192.168.128.1
 HADOOP_HOME=/home/grakra/workspace/hadoop_all/hadoop
 HADOOP_CONF_DIR=/home/grakra/workspace/hadoop_docker/hadoop_client_conf
 YARN_CONF_DIR=/home/grakra/workspace/hadoop_docker/hadoop_client_conf
