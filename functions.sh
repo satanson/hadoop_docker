@@ -128,3 +128,13 @@ endsWith(){
     return 0
   fi
 }
+
+ensureNumber(){
+  local num=${1:?"missing arg:'num'"};shift
+  local isNum=$(perl -e "print qq/ok/ if qq(${num}) =~ /^\\d+$/")
+  if [ -z ${isNum} ];then
+    echo "Illegal number: '${num}'" >&2
+    exit 1
+  fi
+  echo ${num}
+}
