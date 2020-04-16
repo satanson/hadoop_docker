@@ -1,0 +1,5 @@
+#!/bin/bash
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+source ${basedir}/flink-env.sh
+export TERM=xterm-color
+exec ${flink_dir}/bin/start-scala-shell.sh $@
