@@ -15,3 +15,4 @@ ${basedir}/start_yarn.sh ${bootstrap}
 sleep 5
 ${basedir}/start_mr_history_server.sh
 ${basedir}/start_spark_history_server.sh
+${basedir}/start_kafka.sh

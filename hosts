@@ -97,3 +97,13 @@
 192.168.129.70 mysql0
 192.168.129.71 mysql1
 192.168.129.72 mysql2
+
+## kafka_0_10
+192.168.129.80 kafka_broker0
+192.168.129.81 kafka_broker1
+192.168.129.82 kafka_broker2
+192.168.129.83 kafka_broker3
+192.168.129.84 kafka_broker4
+
+## kafka-manager
+192.168.129.90 kafka-manager

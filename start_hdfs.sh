@@ -90,12 +90,19 @@ if [ -n "$bootstrap" ];then
   rm -fr ${basedir}/datanode*_logs/*
   format
 fi
+
 while : ; do
+
   for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))}");do
+    set +e +o pipefail
+    docker kill ${name}
+    docker rm ${name}
+    set -e -o pipefail
     startNameNode $name
   done
 
   sleep 10
+
   if ! docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -transitionToActive gra2 --forceactive;then
     continue
   fi

@@ -138,3 +138,24 @@ ensureNumber(){
   fi
   echo ${num}
 }
+
+nonstrict_shopts(){
+  local saved=$(set +o)
+  set +e +o pipefail
+  echo ${saved}
+}
+
+restore_shopts(){
+  set +vx;eval "${1:?undefined}"
+}
+
+kill_docker_nodes(){
+  local pattern=${1:?"missing 'pattern'"};shift
+  local saved=$(nonstrict_shopts)
+  for node in $(docker ps --format {{.Names}} --filter name=${pattern});do
+    docker kill ${node}
+    docker rm ${node}
+  done
+  restore_shopts "${saved}"
+}
+

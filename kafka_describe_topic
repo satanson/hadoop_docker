@@ -1,0 +1,7 @@
+#!/bin/bash
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+kafka_dir=$(cd $(readlink -f ${basedir}/../hadoop_all/kafka);pwd)
+cd ${basedir}
+zkQuorum=zk0:2181,zk1:2181,zk2:2181
+
+${kafka_dir}/bin/kafka-topics.sh --zookeeper ${zkQuorum} --describe $(echo ${1:+"--topic $1"})

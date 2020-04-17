@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e -o pipefail
+
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+kafka_dir=$(cd $(readlink -f ${basedir}/../hadoop_all/kafka);pwd)
+cd ${basedir}
+
+zkQuorum=zk0:2181,zk1:2181,zk2:2181
+topicTriple=${1:?"missing 'topiciTriple'"};shift
+set -- $(echo ${topicTriple} |perl -aF/:/ -lne 'print join " ", @F')
+topic=${1:?"missing 'topic'"};shift
+
+set +e +o pipefail
+partition=${1:-1};shift
+replicas=${1:-3};shift
+set -e -o pipefail
+
+source ${basedir}/functions.sh
+
+cmd=create
+extraOpts="--partition ${partition} --replication-factor ${replicas}"
+if startsWith ${topic} "-";then
+  cmd=delete
+  topic=${topic##-}
+  extraOpts="--if-exists"
+fi
+
+${kafka_dir}/bin/kafka-topics.sh --zookeeper ${zkQuorum} --${cmd} --topic ${topic} $(echo ${extraOpts})

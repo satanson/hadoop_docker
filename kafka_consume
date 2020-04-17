@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e -o pipefail
+
+basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+kafka_dir=$(cd $(readlink -f ${basedir}/../hadoop_all/kafka);pwd)
+cd ${basedir}
+
+group=${1:?"missing 'group'"};shift
+brokerList=kafka_broker0:9092,kafka_broker1:9092,kafka_broker2:9092,kafka_broker3:9092,kafka_broker4:9092 
+topic=${group%%.*}
+
+[ "${topic}" = "${group}" ] && topic="${group}.default"
+
+${kafka_dir}/bin/kafka-console-consumer.sh --bootstrap-server ${brokerList} --topic ${topic} --consumer-property group.id=${group} --from-beginning

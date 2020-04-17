@@ -12,3 +12,5 @@ mysqld/data
 mysqld/run
 *.txt
 h*_systmp/
+kafka010_broker*_confg
+zk_conf/zoo.cfg.dynamic.next
