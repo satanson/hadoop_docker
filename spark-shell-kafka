@@ -1,0 +1,2 @@
+#!/bin/bash
+./spark-shell --jars /home/grakra/workspace/spark/external/kafka-0-10/target/spark-streaming-kafka-0-10_2.11-2.4.3.jar,/home/grakra/workspace/hadoop_all/kafka_2.11-0.10.2.2/libs/kafka_2.11-0.10.2.2.jar,/home/grakra/workspace/hadoop_all/kafka_2.11-0.10.2.2/libs/kafka-clients-0.10.2.2.jar,/home/grakra/workspace/hadoop_all/kafka_2.11-0.10.2.2/libs/kafka-tools-0.10.2.2.jar,/home/grakra/workspace/hadoop_docker/kafka-producer-wraper-1.0-SNAPSHOT.jar
