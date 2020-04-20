@@ -46,6 +46,8 @@ dockerFlags="--rm -w /home/hdfs -u hdfs --privileged --net static_net0 \
   -v ${PWD}/kafka_${kafkaVersion}:/home/hdfs/kafka/conf"
   
 
+${basedir}/start_zk.sh
+
 for node in $(eval "echo kafka_broker{0..$((${kafkaBrokerNum}-1))}") ;do
 	ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /\b$node\b/" hosts)
   mkdir -p ${PWD}/${node}_data
@@ -64,9 +66,14 @@ for node in $(eval "echo kafka_broker{0..$((${kafkaBrokerNum}-1))}") ;do
   "
 
   docker run -tid ${dockerFlags} ${flags} hadoop_debian:8.8 \
-    bash -c "cd /home/hdfs/kafka && bin/kafka-server-start.sh config/server.properties --override broker.id=${id} --override kafka.logs.dir=/home/hdfs/kafka_logs"
+    bash -c "cd /home/hdfs/kafka && bin/kafka-server-start.sh config/server.properties \
+    --override broker.id=${id} \
+    --override kafka.logs.dir=/home/hdfs/kafka_logs"
 done
 
 ip=$(perl -aF/\\s+/ -ne "print \$F[0] if /^\s*\d+(\.\d+){3}\s*\bkafka-manager\b/" hosts)
 zkQuorums=zk0:2181,zk1:2181,zk2:2181
-docker run -dit --net static_net0 --ip ${ip} --rm --name kafka-manager -v ${PWD}/hosts:/etc/hosts -e ZK_HOSTS=${zkQuorums} kafkamanager/kafka-manager
+docker run -dit --net static_net0 --ip ${ip} --rm --name kafka-manager \
+  -v ${PWD}/hosts:/etc/hosts \
+  -e ZK_HOSTS=${zkQuorums} \
+  kafkamanager/kafka-manager

@@ -1,7 +1,10 @@
 #!/bin/bash
 basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+cd ${basedir}
+
 bootstrap=$1;shift
 
+source ${basedir}/functions.sh
 zkRoot=${basedir}/../hadoop_all/zookeeper
 
 set -e -o pipefail
@@ -10,15 +13,13 @@ if [ -n "${bootstrap}" ];then
 fi
 
 zkNum=3
+alivesNum=$(count_docker_nodes '^zk\d+$')
+if [ -z "${bootstrap}" -a ${zkNum} -eq ${alivesNum} ];then
+  echo "All zookeeper nodes(${zkNum}) are alive";
+  exit 0;
+fi
 
-for node in $(eval "echo zk{0..$((${zkNum}-1))}") ;do
-  set +e +o pipefail
-  docker kill ${node}
-  docker rm ${node}
-  set -e -o pipefail
-done
-
-cd ${basedir}
+kill_docker_nodes '^zk\d+$'
 
 dockerFlags="-tid --rm -w /home/hdfs -u hdfs --privileged --net static_net0
   -v /home/grakra/bin/greys:/home/hdfs/greys
