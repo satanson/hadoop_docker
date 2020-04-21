@@ -2,20 +2,16 @@
 basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
 bootstrap=$1;shift
 
+source ${basedir}/functions.sh
+
 cd ${basedir}
 bkRoot=$(readlink -f ${basedir}/../hadoop_all/bookkeeper-server)
 bkNum=5
 bkAutoRecoveryNum=1
 
-for node in $(eval "echo bk{0..$((${bkNum}-1))}");do
-	docker kill $node
-	docker rm $node
-done
 
-for node in $(eval "echo bk_autorecovery{0..$((${bkAutoRecoveryNum}-1))}");do
-	docker kill $node
-	docker rm $node
-done
+kill_docker_nodes '^bk_autorecovery\d+$'
+kill_docker_nodes '^bk\d+$'
 
 set -e -o pipefail
 dockerFlags="--rm -w /home/hdfs -u hdfs --privileged --net static_net0 -v ${PWD}/hosts:/etc/hosts -v ${bkRoot}:/home/hdfs/bk -v ${PWD}/bk_conf:/home/hdfs/bk/conf"

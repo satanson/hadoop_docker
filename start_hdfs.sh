@@ -2,6 +2,8 @@
 
 bootstrap=${1};shift
 basedir=$(cd $(dirname ${BASH_SOURCE:-$0});pwd)
+source ${basedir}/functions.sh
+
 nameNodeCount=2
 dataNodeCount=6
 
@@ -71,12 +73,8 @@ startDataNode(){
 }
 
 
-for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))} datanode{0..$((${dataNodeCount}-1))}");do
-  set +e +o pipefail
-  docker kill ${name}
-  docker rm ${name}
-  set -e -o pipefail
-done
+kill_docker_nodes '^datanode\d+$'
+kill_docker_nodes '^namenode\d+$'
 
 if [ -n "$bootstrap" ];then
   rm -fr ${basedir}/namenode*_data/*
@@ -92,12 +90,8 @@ if [ -n "$bootstrap" ];then
 fi
 
 while : ; do
-
+  kill_docker_nodes '^namenode\d+$'
   for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))}");do
-    set +e +o pipefail
-    docker kill ${name}
-    docker rm ${name}
-    set -e -o pipefail
     startNameNode $name
   done
 

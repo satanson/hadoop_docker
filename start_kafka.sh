@@ -11,9 +11,7 @@ kafkaConfigTemplate=${basedir}/kafka_config
 bootstrap=${1:-""}
 
 kill_docker_nodes "^kafka-manager$"
-echo "#################"
 kill_docker_nodes 'kafka_broker'
-echo "#################"
 
 format(){
   for node in $(eval "echo kafka_broker{0..$((${kafkaBrokerNum}-1))}") ;do
@@ -42,8 +40,7 @@ dockerFlags="--rm -w /home/hdfs -u hdfs --privileged --net static_net0 \
   -e LOG_DIR=/home/hdfs/kafka_logs \
   -e JMX_PORT=10000 \
   -v ${PWD}/hosts:/etc/hosts \
-  -v ${kafkaRoot}:/home/hdfs/kafka \
-  -v ${PWD}/kafka_${kafkaVersion}:/home/hdfs/kafka/conf"
+  -v ${kafkaRoot}:/home/hdfs/kafka"
   
 
 ${basedir}/start_zk.sh

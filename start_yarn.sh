@@ -1,7 +1,9 @@
 #!/bin/bash
-
+set -e -o pipefail
 basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
-bootstrap=$1;shift
+source ${basedir}/functions.sh
+
+bootstrap=$1
 yarnRmCount=2
 yarnNmCount=8
 
@@ -53,13 +55,8 @@ start_yarnnm(){
 	startNode $name "/home/hdfs/yarnnm_data" ${PWD}/${name}_conf nodemanager
 }
 
-
-for name in $(eval "echo yarnrm{0..$((${yarnRmCount}-1))} yarnnm{0..$((${yarnNmCount}-1))}");do
-  set +e +o pipefail
-  docker kill ${name}
-  docker rm ${name}
-  set -e -o pipefail
-done
+kill_docker_nodes '^yarnrm\d+$'
+kill_docker_nodes '^yarnnm\d+$'
 
 format(){
   docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server localhost:2181 rmr /yarn-leader-election

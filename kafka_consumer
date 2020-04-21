@@ -2,6 +2,8 @@
 set -e -o pipefail
 
 basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+source ${basedir}/functions.sh
+
 kafka_dir=$(cd $(readlink -f ${basedir}/../hadoop_all/kafka);pwd)
 cd ${basedir}
 
@@ -11,4 +13,13 @@ topic=${group%%.*}
 
 [ "${topic}" = "${group}" ] && topic="${group}.default"
 
-${kafka_dir}/bin/kafka-console-consumer.sh --bootstrap-server ${brokerList} --topic ${topic} --consumer-property group.id=${group} --from-beginning
+bin=${kafka_dir}/bin/kafka-console-consumer.sh
+version=$(${bin} --version)
+
+if startsWith "${version}" 2.5.0;then
+  groupOpt="--group ${group}"
+else
+  groupOpt="--consumer-property group.id=${group}"
+fi
+
+${bin} --bootstrap-server ${brokerList} --topic ${topic} ${groupOpt} --from-beginning

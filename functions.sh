@@ -6,21 +6,6 @@ selectWord(){
   perl -e "print (join qq{\\t}, (grep /^${kw}/, (split qq/${sep}/, qq/${words}/)))"
 }
 
-kill2docker(){
-  local p=${1:?"undefined 'p'"};shift
-  local kw=${1:?"undefined 'p'"};shift
-  docker kill $p
-}
-
-killAll(){
-  local comp=$(docker ps -a --format "{{.Names}}"|perl -lne 'chomp;push @a,$_}{print join ":", @a')
-  local kw=${1:?"missing 'keyword'"};shift
-  for p in $(selectWord ${comp} ":" ${kw});do
-    echo kill2docker $p ${kw}
-    kill2docker $p ${kw}
-  done
-}
-
 selectOption(){
   test $# -gt 0
   select opt in $*;do

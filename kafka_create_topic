@@ -16,9 +16,15 @@ replicas=${1:-3};shift
 set -e -o pipefail
 
 source ${basedir}/functions.sh
+bin=${kafka_dir}/bin/kafka-topics.sh
+version=$(${bin} --version)
 
+if startsWith "${version}" 2.5.0;then
+  extraOpts="--partitions ${partition} --replication-factor ${replicas}"
+else
+  extraOpts="--partition ${partition} --replication-factor ${replicas}"
+fi
 cmd=create
-extraOpts="--partition ${partition} --replication-factor ${replicas}"
 if startsWith ${topic} "-";then
   cmd=delete
   topic=${topic##-}

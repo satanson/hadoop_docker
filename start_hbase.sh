@@ -1,12 +1,14 @@
 #!/bin/bash
 
-bootstrap=${1};shift
 basedir=$(cd $(dirname $(readlink -f ${BASH_SOURCE:-$0}));pwd)
+cd ${basedir}
+source ${basedir}/functions.sh
+
 hmasterCount=2
 hregionserverCount=6
 hthriftserverCount=2
 
-cd  ${basedir}
+bootstrap=${1};shift
 
 hadoopRoot=$(readlink -f ${basedir}/../hadoop_all/hadoop)
 hbaseRoot=$(readlink -f ${basedir}/../hadoop_all/hbase)
@@ -63,12 +65,9 @@ startHThriftServer(){
 	startNode $name ${PWD}/hbase_conf thrift -m 150 -w 1000 -q 2000 --port 9400 --infoport 9405  start
 }
 
-for name in $(eval "echo hmaster{0..$((${hmasterCount}-1))} hregionserver{0..$((${hregionserverCount}-1))} hthriftserver{0..$((${hthriftserverCount}-1))}");do
-  set +e +o pipefail
-  docker kill ${name}
-  docker rm ${name}
-  set -e -o pipefail
-done
+kill_docker_nodes '^hthriftserver\d+$'
+kill_docker_nodes '^hregionserver\d+$'
+kill_docker_nodes '^hmaster\d+$'
 
 if [ -n "$bootstrap" ];then
   ./hdfs dfs -rm -r /hbase
