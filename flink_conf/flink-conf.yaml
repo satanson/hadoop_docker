@@ -106,7 +106,8 @@ high-availability.zookeeper.client.acl: open
 # Supported backends are 'jobmanager', 'filesystem', 'rocksdb', or the
 # <class-name-of-factory>.
 #
-state.backend: filesystem
+# state.backend: filesystem
+state.backend: rocksdb
 
 # Directory for checkpoints filesystem, when using any of the default bundled
 # state backends.

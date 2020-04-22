@@ -91,11 +91,23 @@ fi
 
 while : ; do
   kill_docker_nodes '^namenode\d+$'
+  echo "start HDFS namenodes..."
   for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))}");do
     startNameNode $name
   done
 
   sleep 10
+  alivesNum=$(count_docker_nodes '^namenode\d+$')
+  if [ ${alivesNum} -eq ${nameNodeCount} ];then
+    break
+  fi
+done
+
+sleepSecs=1
+while : ; do
+  sleep ${sleepSecs}
+  sleepSecs=$((sleepSecs*2))
+  sleepSecs=$((sleepSecs>60?60:sleepSecs))
 
   if ! docker exec -it namenode0 /home/hdfs/hadoop/bin/hdfs haadmin -ns grakrabackend -transitionToActive gra2 --forceactive;then
     continue
