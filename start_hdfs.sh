@@ -89,6 +89,7 @@ if [ -n "$bootstrap" ];then
   format
 fi
 
+sleepSecs=10
 while : ; do
   kill_docker_nodes '^namenode\d+$'
   echo "start HDFS namenodes..."
@@ -96,7 +97,9 @@ while : ; do
     startNameNode $name
   done
 
-  sleep 10
+  sleep ${sleepSecs}
+  sleepSecs=$((sleepSecs+1))
+  sleepSecs=$((sleepSecs>10?10:sleepSecs))
   alivesNum=$(count_docker_nodes '^namenode\d+$')
   if [ ${alivesNum} -eq ${nameNodeCount} ];then
     break
@@ -105,6 +108,15 @@ done
 
 sleepSecs=1
 while : ; do
+  alivesNum=$(count_docker_nodes '^namenode\d+$')
+  if [ ${alivesNum} -lt ${nameNodeCount} ];then
+    kill_docker_nodes '^namenode\d+$'
+    echo "start HDFS namenodes..."
+    for name in $(eval "echo namenode{0..$((${nameNodeCount}-1))}");do
+      startNameNode $name
+    done
+  fi
+
   sleep ${sleepSecs}
   sleepSecs=$((sleepSecs*2))
   sleepSecs=$((sleepSecs>60?60:sleepSecs))
