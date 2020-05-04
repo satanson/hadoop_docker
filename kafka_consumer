@@ -11,7 +11,7 @@ group=${1:?"missing 'group'"};shift
 brokerList=kafka_broker0:9092,kafka_broker1:9092,kafka_broker2:9092,kafka_broker3:9092,kafka_broker4:9092 
 topic=${group%%.*}
 
-[ "${topic}" = "${group}" ] && topic="${group}.default"
+[ "${topic}" = "${group}" ] && group="${group}.default"
 
 bin=${kafka_dir}/bin/kafka-console-consumer.sh
 version=$(${bin} --version)
