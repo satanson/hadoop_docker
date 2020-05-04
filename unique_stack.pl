@@ -15,11 +15,11 @@ use constant {
 sub recognize($){
   local $_ = shift;
   if (/^thread_name="(.*?)"\s+thread_id=(0x[\da-f]+)/) {
-    return (SECT_BEGIN, $1, $2);
+    return (SECT_BEGIN, $_);
   } elsif (/^\s+@\w+(?:\.\w+)*\.(\w+\.\w+)/) {
-    return (SECT_FIRST, $1);
+    return (SECT_FIRST, $_);
   } elsif (/^\s+at\s+\w+(?:\.\w+)*\.(\w+\.\w+)/) {
-    return (SECT_REST, $1);
+    return (SECT_REST, $_);
   } elsif (/^\s+$/) {
     return (SECT_END);
   } else {
@@ -28,14 +28,13 @@ sub recognize($){
 }
 
 sub sect_begin(\%@){
-  my ($ctx,$threadName, $threadId)=@_;
-  $ctx->{partial}=[];
-  $ctx->{thread}="$threadName(thread_id=$threadId)";
+  my ($ctx, $line)=@_;
+  $ctx->{partial}=[$line];
 }
 
 sub sect_body(\%@){
-  my ($ctx,@args)=@_;
-  unshift @{$ctx->{partial}}, $args[0];
+  my ($ctx, $line)=@_;
+  push @{$ctx->{partial}}, $line;
 }
 
 sub sect_end($@){
@@ -45,14 +44,11 @@ sub sect_end($@){
     $ctx->{partial}=undef;
     return;
   }
-  #print Dumper($ctx);
-  #print Dumper($partial);
-  unshift @$partial, $ctx->{thread};
-  my $result=join ";", @$partial;
-  if (!exists $ctx->{stack}{$result}){
-    $ctx->{stack}{$result} = 1;
+  my $result=join "\0", @$partial;
+  if (!exists $ctx->{stacks}{$result}){
+    $ctx->{stacks}{$result} = 1;
   } else {
-    $ctx->{stack}{$result} +=1;
+    $ctx->{stacks}{$result} +=1;
   }
   $ctx->{partial}=undef;
 }
@@ -60,7 +56,7 @@ sub sect_end($@){
 sub sect_err($@){
   my $ctx=shift @_;
   $ctx->{thread}=undef;
-  $ctx->{stack}={};
+  $ctx->{stacks}={};
   $ctx->{partial}=undef;
   $ctx->{state}=SECT_END;
 }
@@ -91,7 +87,7 @@ sub transfer($@){
 my $ctx={
   state=>SECT_END,
   partial=>undef,
-  stack=>{},
+  stacks=>{},
 };
 
 while(<>){
@@ -100,5 +96,5 @@ while(<>){
   transfer($ctx, @a);
 }
 transfer($ctx, SECT_END);
-#print join "\n",map {$_." ".$ctx->{stack}{$_}} keys %{$ctx->{stack}};
-print join "\n",map {$_." ".1} keys %{$ctx->{stack}};
+#print join "\n",map {$_." ".$ctx->{stacks}{$_}} keys %{$ctx->{stacks}};
+print join "\n",map {s/\0//gr} keys %{$ctx->{stacks}};
