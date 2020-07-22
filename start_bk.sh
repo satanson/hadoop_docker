@@ -17,6 +17,7 @@ set -e -o pipefail
 dockerFlags="--rm -w /home/hdfs -u hdfs --privileged --net static_net0 -v ${PWD}/hosts:/etc/hosts -v ${bkRoot}:/home/hdfs/bk -v ${PWD}/bk_conf:/home/hdfs/bk/conf"
 
 bootstrap(){
+    set +e +o pipefail
     # create zkLedgersRootPath i.e /bk/ledgers
     zkLedgersRootPath=$(perl -lne 'print $1 if/^\s*zkLedgersRootPath\s*=\s*(\S+)/' bk_conf/bk_server.conf)
     docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server zk0:2181 rmr ${zkLedgersRootPath} 
@@ -24,6 +25,7 @@ bootstrap(){
       docker exec -it zk0 /home/hdfs/zk/bin/zkCli.sh -server zk0:2181 create ${dir} ""
     done
     rm -fr ${basedir}/bk*_data/*
+    set -e -o pipefail
 }
 
 if [ -n "${bootstrap}" ];then
