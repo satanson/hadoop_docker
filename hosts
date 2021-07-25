@@ -1,6 +1,4 @@
-
-192.168.128.1 it.is.me
-
+#hadoop
 192.168.128.2	datanode0
 192.168.128.3	datanode1
 192.168.128.4	datanode2
@@ -11,18 +9,19 @@
 192.168.128.8	namenode0
 192.168.128.9	namenode1
 
-127.0.0.1 localhost
-
+# zookeeper
 192.168.128.40 zk0
 192.168.128.41 zk1
 192.168.128.42 zk2
+
+# bookkeeper or qjournal
 192.168.128.50 bk0 qjournal0
 192.168.128.51 bk1 qjournal1
 192.168.128.52 bk2 qjournal2
 192.168.128.53 bk3
 192.168.128.54 bk4
-192.168.128.55 bk_autorecovery0
 
+# yarn
 192.168.128.60 yarnrm0
 192.168.128.61 yarnrm1
 
@@ -35,6 +34,7 @@
 192.168.128.76 yarnnm6
 192.168.128.77 yarnnm7
 
+# hbase
 192.168.128.80 hmaster0
 192.168.128.81 hmaster1
 192.168.128.90 hregionserver0
@@ -46,6 +46,7 @@
 192.168.128.100 hthriftserver0
 192.168.128.101 hthriftserver1
 
+# yet another hdfs
 192.168.128.102	ya_datanode0
 192.168.128.103	ya_datanode1
 192.168.128.104	ya_datanode2
@@ -56,14 +57,18 @@
 192.168.128.108	ya_namenode0
 192.168.128.109	ya_namenode1
 
-
+# yet another zookeeper
 192.168.128.140 ya_zk0
 192.168.128.141 ya_zk1
 192.168.128.142 ya_zk2
+
+# yet another bookkeeper
 192.168.128.150 ya_bk0
 192.168.128.151 ya_bk1
 192.168.128.152 ya_bk2
 
+
+# yet another yarn
 192.168.128.160 ya_yarnrm0
 192.168.128.161 ya_yarnrm1
 
@@ -74,6 +79,7 @@
 192.168.128.176 ya_yarnnm4
 192.168.128.177 ya_yarnnm5
 
+# yet another hbase
 192.168.128.180 ya_hmaster0
 192.168.128.181 ya_hmaster1
 192.168.128.190 ya_hregionserver0
@@ -88,6 +94,45 @@
 192.168.128.211 prometheus
 192.168.128.212 grafana
 
+##################### TIDB #####################
+
+# pd-server
+192.168.129.10 pd_server0
+192.168.129.11 pd_server1
+192.168.129.12 pd_server2
+
+# tikv-server
+192.168.129.20 tikv_server0
+192.168.129.21 tikv_server1
+192.168.129.22 tikv_server2
+192.168.129.23 tikv_server3
+192.168.129.24 tikv_server4
+192.168.129.25 tikv_server5
+192.168.129.26 tikv_server6
+192.168.129.27 tikv_server7
+192.168.129.28 tikv_server8
+192.168.129.29 tikv_server9
+
+# tidb-server
+192.168.129.30 tidb_server0
+192.168.129.31 tidb_server1
+192.168.129.32 tidb_server2
+
+# pushgateway
+192.168.129.100 tidb_pushgateway
+192.168.129.101 tidb_prometheus
+192.168.129.102 tidb_grafana
+
+# binlog_pump
+192.168.129.40 binlog_pump0 binlog.pump0
+192.168.129.41 binlog_pump1
+192.168.129.42 binlog_pump2
+
+# binlog_drainer
+192.168.129.50 binlog_drainer0 binlog.drainer0
+#192.168.129.51 binlog_drainer1
+#192.168.129.52 binlog_drainer2
+
 # mysqld
 192.168.129.60 mysqld0
 192.168.129.61 mysqld1
@@ -98,7 +143,12 @@
 192.168.129.71 mysql1
 192.168.129.72 mysql2
 
-## kafka_0_10
+# mysql
+192.168.129.80 mysql_tidb_client0
+192.168.129.81 mysql_tidb_client1
+192.168.129.82 mysql_tidb_client2
+
+## kafka
 192.168.129.80 kafka_broker0
 192.168.129.81 kafka_broker1
 192.168.129.82 kafka_broker2
@@ -107,3 +157,57 @@
 
 ## kafka-manager
 192.168.129.90 kafka-manager
+
+## doris cluster
+
+# doris-fe follower
+192.168.129.100 doris_fe_follower0
+192.168.129.101 doris_fe_follower1
+192.168.129.102 doris_fe_follower2
+
+# doris-fe observer
+192.168.129.110 doris_fe_observer0
+192.168.129.111 doris_fe_observer1
+192.168.129.112 doris_fe_observer2
+
+# doris-be
+192.168.129.120 doris_be0
+192.168.129.121 doris_be1
+192.168.129.122 doris_be2
+
+# doris mysql client
+192.168.129.130 doris_fe_mysql0
+192.168.129.131 doris_fe_mysql1
+
+# doris hdfs-broker
+192.168.129.140 doris_hdfs_broker0
+192.168.129.141 doris_hdfs_broker1
+192.168.129.142 doris_hdfs_broker2
+
+# ES cluster
+## master-eligible node
+192.168.129.150 es_master0
+192.168.129.151 es_master1
+192.168.129.152 es_master2
+
+# data node
+192.168.129.160 es_data0
+192.168.129.161 es_data1
+192.168.129.162 es_data2
+192.168.129.163 es_data3
+192.168.129.164 es_data4
+192.168.129.165 es_data5
+
+# coordinator node
+192.168.129.170 es_coord0
+192.168.129.171 es_coord1
+192.168.129.172 es_coord2
+
+# kibana
+192.168.129.180 kibana
+
+# presto
+192.168.129.190 presto_coordinator0
+192.168.129.191 presto_worker0
+192.168.129.192 presto_worker1
+192.168.129.193 presto_worker2

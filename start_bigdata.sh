@@ -7,10 +7,10 @@ cd ${basedir}
 ${basedir}/start_zk_bk_hdfs.sh bootstrap
 
 sleep 5
-docker exec -it namenode0 /root/hadoop/bin/hdfs dfs -mkdir -p /mr_history
-docker exec -it namenode0 /root/hadoop/bin/hdfs dfs -chmod -R 0777 /mr_history
-docker exec -it namenode0 /root/hadoop/bin/hdfs dfs -mkdir -p /spark_history
-docker exec -it namenode0 /root/hadoop/bin/hdfs dfs -chmod -R 0777 /spark_history
+hdfs dfs -mkdir -p /mr_history
+hdfs dfs -chmod -R 0777 /mr_history
+hdfs dfs -mkdir -p /spark_history
+hdfs dfs -chmod -R 0777 /spark_history
 hdfs dfs -ls /
 
 ${basedir}/start_yarn.sh bootstrap

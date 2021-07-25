@@ -11,4 +11,6 @@ export SPARK_CONF_DIR=${basedir}/spark_conf_client
 export HIVE_HOME=$(cd ${basedir}/../hadoop_all/hive23;pwd)
 export HIVE_CONF_DIR=${basedir}/hive23_conf
 
+export JAVA_HOME=/home/grakra/bin/jdk1.8.0_221
+export PATH=${JAVA_HOME}/bin:${PATH}
 ${HIVE_HOME}/bin/hiveserver2 $*

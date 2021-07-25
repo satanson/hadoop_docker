@@ -10,4 +10,6 @@ export HBASE_CONF_DIR=${basedir}/hbase_client_conf
 export HIVE_HOME=$(cd ${basedir}/../hadoop_all/hive23;pwd)
 export HIVE_CONF_DIR=${basedir}/hive23_conf
 export HCAT_LOG_DIR=${basedir}/hcatlog_log
+export JAVA_HOME=/home/grakra/bin/jdk1.8.0_221
+export PATH=${JAVA_HOME}/bin:${PATH}
 ${HIVE_HOME}/hcatalog/sbin/hcat_server.sh --config ${HIVE_CONF_DIR} $*

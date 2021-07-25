@@ -6,6 +6,27 @@ selectWord(){
   perl -e "print (join qq{\\t}, (grep /^${kw}/, (split qq/${sep}/, qq/${words}/)))"
 }
 
+kill2docker(){
+  local p=${1:?"undefined 'p'"};shift
+  local kw=${1:?"undefined 'p'"};shift
+  docker kill $p
+}
+
+killAll(){
+  local comp=$(docker ps -a --format "{{.Names}}"|perl -lne 'chomp;push @a,$_}{print join ":", @a')
+  local kw=${1:?"missing 'keyword'"};shift
+  for p in $(selectWord ${comp} ":" ${kw});do
+    echo kill2docker $p ${kw}
+    kill2docker $p ${kw}
+  done
+}
+
+isContainerRunning(){
+  local kw=${1:?"missing 'keyword'"}
+  names=$(docker ps -f status=running -f name=${kw} --format={{.Names}})
+  [ -n "${names}" ]
+}
+
 selectOption(){
   test $# -gt 0
   select opt in $*;do
@@ -112,6 +133,25 @@ endsWith(){
   else
     return 0
   fi
+}
+
+green_print(){
+  echo -e "\e[32;40;1m$*\e[m" 
+}
+
+red_print(){
+  echo -e "\e[31;40;1m$*\e[m"
+}
+
+yellow_print(){
+  echo -e "\e[33;100;1m$*\e[m"
+}
+
+replace(){
+  local s=${1:?"undefind 's'"};shift
+  local a=${1:?"undefined 'a'"};shift
+  local b=${1:?"undefined 'b'"};shift
+  perl -e "print qq/${s}/ =~ y/${a}/${b}/r"
 }
 
 ensureNumber(){

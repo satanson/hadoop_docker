@@ -1,0 +1,8 @@
+/hive_table0_orc_files/hive_table0_0.orc
+/hive_table0_orc_files/hive_table0_1.orc
+/hive_table0_orc_files/hive_table0_4095.orc
+/hive_table0_orc_files/hive_table0_4096.orc
+/hive_table0_orc_files/hive_table0_4097.orc
+/hive_table0_orc_files/hive_table0_8191.orc
+/hive_table0_orc_files/hive_table0_8192.orc
+/hive_table0_orc_files/hive_table0_8193.orc
